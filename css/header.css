@@ -113,7 +113,7 @@ header .searchBarSection .searchBarContainer input {
   padding: 0 5.5rem;
   border: 1px solid #572EE5;
   border-radius: 27px;
-  font: "Roboto" 1.6rem #000;
+  font-size: 1.6rem;
 }
 
 header .searchBarSection .searchBarContainer input::-webkit-input-placeholder {
@@ -147,35 +147,59 @@ header .searchBarSection .searchBarContainer .searchIcon {
   cursor: pointer;
 }
 
-header .searchBarSection .gifoContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+header .searchBarSection .autocompleteBox {
+  display: none;
+  width: 50rem;
+  position: absolute;
+  top: 54rem;
+  padding: 0 5.5rem;
+  background-color: #fff;
+  border: 1px solid #572EE5;
+  border-radius: 0 0 27px 27px;
+}
+
+header .searchBarSection .autocompleteBox .autocompleteTag {
+  font-size: 1.6rem;
+  color: #9CAFC3;
+  margin-top: 1.5rem;
+}
+
+header .searchBarSection .headerTextContainer {
   text-align: center;
 }
 
-header .searchBarSection .gifoContainer h2 {
+header .searchBarSection .headerTextContainer h2 {
   margin-top: 7rem;
   font-size: 1.8rem;
   font-weight: bold;
   line-height: 2.5rem;
 }
 
-header .searchBarSection .gifoContainer .trendingTags {
+header .searchBarSection .headerTextContainer .trendingTags {
   font-size: 1.6rem;
   font-weight: normal;
   line-height: 2.5rem;
 }
 
+header .searchBarSection .gifoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  padding: 0 15rem;
+}
+
 header .searchBarSection .gifoContainer .gifoHeaderContainer {
-  width: 20vw;
-  height: 20vw;
-  margin: 0 1.5rem;
+  width: 15vw;
+  height: 15vw;
+  margin: 0.7rem 0.7rem;
 }
 
 header .searchBarSection .gifoContainer .gifoHeaderContainer .gifo {
-  width: 20vw;
-  height: 20vw;
+  width: 15vw;
+  height: 15vw;
 }
 
 header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay {
@@ -185,10 +209,10 @@ header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay 
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  height: 20vw;
+  height: 15vw;
   background-color: rgba(87, 46, 229, 0.7);
   position: relative;
-  bottom: 20.3vw;
+  bottom: 15.3vw;
 }
 
 header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer {
