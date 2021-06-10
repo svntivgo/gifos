@@ -1,0 +1,117 @@
+@import 'variables';
+
+main {
+    background-color: $softGreyColor;
+    padding: 7rem 9rem 18rem 9rem;
+    text-align: center;
+    h2 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    p {
+        font-size: 1.8rem;
+    }
+    .trendingContainer{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5rem;
+        .arrow {
+            width: 4rem;
+            height: 4rem;
+            background-size: cover;
+            &:hover {
+                cursor: pointer;
+                background-size: cover;
+            }
+            &.prev {
+                background: url(../svg/button-slider-left.svg);
+                &:hover {
+                    background: url(../svg/button-slider-left-hover.svg);
+                }
+            }
+            &.next {
+                background: url(../svg/Button-Slider-right.svg);
+                &:hover {
+                    background: url(../svg/button-slider-right-hover.svg);
+                }
+            }
+        }
+        .trendingGifosContainer{
+            display: flex;
+            .trendingGifo {
+                width: 20vw;
+                height: 20vw;
+                margin: 0 1.5rem;
+                .gifo {
+                    width: 20vw;
+                    height: 20vw;
+                }
+                .gifoTrendingOverlay {
+                    display: none;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    height: 20vw;
+                    background-color: rgba($color: $purpleColor, $alpha: 0.7);
+                    position: relative;
+                    bottom: 20.3vw;
+                    .buttonsContainer {
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        padding-top: 1rem;
+                        padding-right: 0.5rem;
+                        .gifoButton {
+                            width: 3.2rem;
+                            height: 3.2rem;
+                            margin: 0 0.5rem;
+                            background-size: cover;
+                            &.favoriteBtn {
+                                background: url(../svg/icon-fav.svg);
+                                &:hover {
+                                    background: url(../svg/icon-fav-hover.svg);
+                                }
+                                &:active {
+                                    max-width: 3.2rem;
+                                    max-height: 3.2rem;
+                                    background: url(../svg/icon-fav-active.svg);
+                                    background-size: cover;
+                                    background-position: center;
+                                }
+                            }
+                            &.downloadBtn {
+                                background: url(../svg/icon-download.svg);
+                                &:hover {
+                                    background: url(../svg/icon-download-hover.svg);
+                                }
+                            }
+                            &.maximizeBtn {
+                                background: url(../svg/icon-max-normal.svg);
+                                &:hover {
+                                    background: url(../svg/icon-max-hover.svg);
+                                }
+                            }
+                        }
+                    }
+                    .gifoInfoText{
+                        display: flex;
+                        flex-direction: column;
+                        padding: 8rem 2rem 2rem 2rem;
+                        text-align: start;
+                        p {
+                            color: $whiteColor;
+                            &.trendingGifoOwner {
+                                font-size: 1.5rem;
+                            }
+                            &.trendingGifoName {
+                                font-size: 1.6rem;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

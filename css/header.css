@@ -1,0 +1,269 @@
+header .headerBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.6rem 15.6rem;
+  border-top: 5px solid #572EE5;
+}
+
+header .headerBar .logo {
+  width: 6.6rem;
+  height: 6rem;
+}
+
+header .headerBar .navBar {
+  max-height: 6rem;
+  margin: auto 0 auto auto;
+  padding: 2rem 0;
+}
+
+header .headerBar .navBar .navBarList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+header .headerBar .navBar .navBarList .navBarItem {
+  list-style: none;
+  margin-right: 5rem;
+}
+
+header .headerBar .navBar .navBarList .navBarItem:hover {
+  border-bottom: 2px solid #50E3C2;
+}
+
+header .headerBar .navBar .navBarList .navBarItem a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  font-weight: bold;
+  color: #572EE5;
+}
+
+header .headerBar .navBar .navBarList .navBarItem a:active {
+  color: #9CAFC3;
+}
+
+header .headerBar .newGifoButton {
+  width: 6rem;
+  height: 6rem;
+  background: url(../svg/button-crear-gifo.svg);
+  background-size: cover;
+}
+
+header .headerBar .newGifoButton:hover {
+  background: url(../svg/CTA-crear-gifo-hover.svg);
+  background-size: cover;
+  cursor: pointer;
+}
+
+header .headerBar .newGifoButton:active {
+  background: url(../svg/CTA-crear-gifo-active.svg);
+  background-size: cover;
+}
+
+header .searchBarSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 8rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .searchBarSection h1 {
+  width: 60rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 5rem;
+  text-align: center;
+}
+
+header .searchBarSection h1 span {
+  color: #50E3C2;
+}
+
+header .searchBarSection .headerImage {
+  width: 40rem;
+  height: 19rem;
+  margin-top: 2.4rem;
+  background: url(../svg/ilustra_header.svg);
+  background-size: cover;
+}
+
+header .searchBarSection .searchBarContainer {
+  width: 50rem;
+  height: 5rem;
+}
+
+header .searchBarSection .searchBarContainer input {
+  width: 50rem;
+  height: 5rem;
+  padding: 0 5.5rem;
+  border: 1px solid #572EE5;
+  border-radius: 27px;
+  font: "Roboto" 1.6rem #000;
+}
+
+header .searchBarSection .searchBarContainer input::-webkit-input-placeholder {
+  font: "Roboto" 1.6rem #9CAFC3;
+}
+
+header .searchBarSection .searchBarContainer input:-ms-input-placeholder {
+  font: "Roboto" 1.6rem #9CAFC3;
+}
+
+header .searchBarSection .searchBarContainer input::-ms-input-placeholder {
+  font: "Roboto" 1.6rem #9CAFC3;
+}
+
+header .searchBarSection .searchBarContainer input::placeholder {
+  font: "Roboto" 1.6rem #9CAFC3;
+}
+
+header .searchBarSection .searchBarContainer input:focus {
+  outline: none;
+}
+
+header .searchBarSection .searchBarContainer .searchIcon {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  left: 45rem;
+  bottom: 3.5rem;
+  background: url(../svg/icon-search.svg);
+  background-size: cover;
+  cursor: pointer;
+}
+
+header .searchBarSection .gifoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+header .searchBarSection .gifoContainer h2 {
+  margin-top: 7rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+}
+
+header .searchBarSection .gifoContainer .trendingTags {
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 2.5rem;
+}
+
+header .searchBarSection .gifoContainer .gifoHeaderContainer {
+  width: 20vw;
+  height: 20vw;
+  margin: 0 1.5rem;
+}
+
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifo {
+  width: 20vw;
+  height: 20vw;
+}
+
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 20vw;
+  background-color: rgba(87, 46, 229, 0.7);
+  position: relative;
+  bottom: 20.3vw;
+}
+
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-top: 1rem;
+  padding-right: 0.5rem;
+}
+
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton {
+  width: 3.2rem;
+  height: 3.2rem;
+  margin: 0 0.5rem;
+  background-size: cover;
+}
+
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.favoriteBtn {
+  background: url(../svg/icon-fav.svg);
+}
+
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.favoriteBtn:hover {
+  background: url(../svg/icon-fav-hover.svg);
+}
+
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.favoriteBtn:active {
+  max-width: 3.2rem;
+  max-height: 3.2rem;
+  background: url(../svg/icon-fav-active.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.downloadBtn {
+  background: url(../svg/icon-download.svg);
+}
+
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.downloadBtn:hover {
+  background: url(../svg/icon-download-hover.svg);
+}
+
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.maximizeBtn {
+  background: url(../svg/icon-max-normal.svg);
+}
+
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.maximizeBtn:hover {
+  background: url(../svg/icon-max-hover.svg);
+}
+
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .gifoInfoText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 8rem 2rem 2rem 2rem;
+  text-align: start;
+}
+
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .gifoInfoText p {
+  color: #fff;
+}
+
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .gifoInfoText p.trendingGifoOwner {
+  font-size: 1.5rem;
+}
+
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .gifoInfoText p.trendingGifoName {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+/*# sourceMappingURL=header.css.map */

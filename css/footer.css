@@ -1,0 +1,58 @@
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5rem 15rem;
+  font-size: 1.3rem;
+}
+
+footer .socialMedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .socialMedia .icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin: 0 1rem;
+  background-size: cover;
+}
+
+footer .socialMedia .icon:hover {
+  cursor: pointer;
+  background-size: cover;
+}
+
+footer .socialMedia .icon:nth-child(2) {
+  margin-left: 2rem;
+}
+
+footer .socialMedia .icon.facebook {
+  width: 0.9rem;
+  background: url(../svg/icon_facebook.svg);
+}
+
+footer .socialMedia .icon.facebook:hover {
+  background: url(../svg/icon_facebook_hover.svg);
+}
+
+footer .socialMedia .icon.twitter {
+  background: url(../svg/icon-twitter.svg);
+}
+
+footer .socialMedia .icon.twitter:hover {
+  background: url(../svg/icon-twitter-hover.svg);
+}
+
+footer .socialMedia .icon.instagram {
+  background: url(../svg/icon_instagram.svg);
+}
+
+footer .socialMedia .icon.instagram:hover {
+  background: url(../svg/icon_instagram-hover.svg);
+}
+/*# sourceMappingURL=footer.css.map */
