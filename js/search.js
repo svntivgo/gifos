@@ -1,7 +1,7 @@
 export {searchListener, drawAutocomplete}
 
-import { getSearchGiphyArray, getGiphyAutocomplete } from "./_async.js";
-import { drawGifos } from "./_results.js";
+import { getSearchGiphyArray, getGiphyAutocomplete } from "./async.js";
+import { drawGifos } from "./results.js";
 let apiKey = 'Ta4raQm67NO2mQWSPCHYL6O0EvldLRJO'
 let searchIcon = document.getElementById('search__icon')
 let searchBar = document.getElementById('search__bar')
