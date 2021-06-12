@@ -1,0 +1,161 @@
+main .trending {
+  background-color: #F3F5F8;
+  padding: 7rem 9rem 18rem 9rem;
+  text-align: center;
+}
+
+main .trending .trending__tittle {
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+main .trending .trending__text {
+  font-size: 1.8rem;
+}
+
+main .trending .trending__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5rem;
+}
+
+main .trending .trending__container .trending__arrow {
+  width: 4rem;
+  height: 4rem;
+  background-size: cover;
+}
+
+main .trending .trending__container .trending__arrow:hover {
+  cursor: pointer;
+  background-size: cover;
+}
+
+main .trending .trending__container .trending__arrow-left {
+  background: url(../svg/button-slider-left.svg);
+}
+
+main .trending .trending__container .trending__arrow-left:hover {
+  background: url(../svg/button-slider-left-hover.svg);
+}
+
+main .trending .trending__container .trending__arrow-right {
+  background: url(../svg/Button-Slider-right.svg);
+}
+
+main .trending .trending__container .trending__arrow-right:hover {
+  background: url(../svg/button-slider-right-hover.svg);
+}
+
+main .trending .trending__container .trending__gifos-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .trending .trending__container .trending__gifos-container .trending__gifo {
+  width: 20vw;
+  height: 20vw;
+  margin: 0 1.5rem;
+}
+
+main .trending .trending__container .trending__gifos-container .trending__gifo .trending__img {
+  width: 20vw;
+  height: 20vw;
+}
+
+main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay {
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 20vw;
+  background-color: rgba(87, 46, 229, 0.7);
+  position: relative;
+  bottom: 20.3vw;
+}
+
+main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-top: 1rem;
+  padding-right: 0.5rem;
+}
+
+main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button {
+  width: 3.2rem;
+  height: 3.2rem;
+  margin: 0 0.5rem;
+  background-size: cover;
+}
+
+main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite {
+  background: url(../svg/icon-fav.svg);
+}
+
+main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite:hover {
+  background: url(../svg/icon-fav-hover.svg);
+}
+
+main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite:active {
+  max-width: 3.2rem;
+  max-height: 3.2rem;
+  background: url(../svg/icon-fav-active.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-download {
+  background: url(../svg/icon-download.svg);
+}
+
+main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-download:hover {
+  background: url(../svg/icon-download-hover.svg);
+}
+
+main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-maximize {
+  background: url(../svg/icon-max-normal.svg);
+}
+
+main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-maximize:hover {
+  background: url(../svg/icon-max-hover.svg);
+}
+
+main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 8rem 2rem 2rem 2rem;
+  text-align: start;
+}
+
+main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-text-container p {
+  color: #fff;
+}
+
+main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-text-container p.trending__gifo-owner {
+  font-size: 1.5rem;
+}
+
+main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-text-container p.trending__gifo-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+/*# sourceMappingURL=trending.css.map */

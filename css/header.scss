@@ -1,28 +1,34 @@
 @import 'variables';
 
 header {
-    .headerBar {
+    .navigation {
         display: flex;
         justify-content: space-between;
         padding: 1.6rem 15.6rem;
         border-top: 5px solid $purpleColor;
-        .logo {
+
+        .navigation__logo {
             width: 6.6rem;
             height: 6rem;
         }
-        .navBar{
+
+        nav {
             max-height: 6rem;
             margin: auto 0 auto auto;
             padding: 2rem 0;
-            .navBarList{
+
+            .navigation__menu {
                 display: flex;
                 flex-wrap: nowrap;
-                .navBarItem{
+
+                .navigation__menu-item {
                     list-style: none;
                     margin-right: 5rem;
+
                     &:hover {
                         border-bottom: 2px solid $greenColor;
                     }
+
                     a {
                         text-decoration: none;
                         text-transform: uppercase;
@@ -30,6 +36,7 @@ header {
                         line-height: 2rem;
                         font-weight: bold;
                         color: $purpleColor;
+
                         &:active {
                             color: $greyColor;
                         }
@@ -37,62 +44,74 @@ header {
                 }
             }
         }
-        .newGifoButton {
+
+        .navigation__new-button {
             width: 6rem;
             height: 6rem;
             background: url(../svg/button-crear-gifo.svg);
             background-size: cover;
+
             &:hover {
                 background: url(../svg/CTA-crear-gifo-hover.svg);
                 background-size: cover;
                 cursor: pointer;
             }
+
             &:active {
                 background: url(../svg/CTA-crear-gifo-active.svg);
                 background-size: cover;
             }
         }
     }
-    .searchBarSection {
+
+    .search {
         display: flex;
         flex-direction: column;
         padding: 8rem 0;
         align-items: center;
-        h1 {
+
+        h1.search__title {
             width: 60rem;
             font-size: 3.5rem;
             font-weight: bold;
             line-height: 5rem;
             text-align: center;
+
             span {
                 color: $greenColor;
             }
         }
-        .headerImage {
+
+        .search__image {
             width: 40rem;
             height: 19rem;
             margin-top: 2.4rem;
             background: url(../svg/ilustra_header.svg);
             background-size: cover;
         }
-        .searchBarContainer {
+
+        .search__container {
             width: 50rem;
             height: 5rem;
-            input {
+
+            .search__bar {
                 width: 50rem;
                 height: 5rem;
                 padding: 0 5.5rem;
                 border: 1px solid $purpleColor;
                 border-radius: 27px;
-                font: 'Roboto' 1.6rem $blackColor;
+                font-size: 1.6rem;
+
                 &::placeholder {
-                    font: 'Roboto' 1.6rem $greyColor;
+                    font: 'Roboto'1.6rem $greyColor;
                 }
+
                 &:focus {
                     outline: none;
                 }
             }
-            .searchIcon {
+
+            .search__icon {
                 width: 2rem;
                 height: 2rem;
                 position: relative;
@@ -103,91 +122,21 @@ header {
                 cursor: pointer;
             }
         }
-        .gifoContainer {
-            display: flex;
-            text-align: center;
-            h2 {
-                margin-top: 7rem;
-                font-size: 1.8rem;
-                font-weight: bold;
-                line-height: 2.5rem;
-            }
-            .trendingTags {
+
+        .search__autocomplete {
+            display: none;
+            width: 50rem;
+            position: absolute;
+            top: 54rem;
+            padding: 0 5.5rem;
+            background-color: $whiteColor;
+            border: 1px solid $purpleColor;
+            border-radius: 0 0 27px 27px;
+
+            .autocompleteTag {
                 font-size: 1.6rem;
-                font-weight: normal;
-                line-height: 2.5rem;
-            }
-            .gifoHeaderContainer {
-                width: 20vw;
-                height: 20vw;
-                margin: 0 1.5rem;
-                .gifo {
-                    width: 20vw;
-                    height: 20vw;
-                }
-                .gifoHeaderOverlay {
-                    display: flex;
-                    flex-wrap: wrap;
-                    width: 100%;
-                    height: 20vw;
-                    background-color: rgba($color: $purpleColor, $alpha: 0.7);
-                    position: relative;
-                    bottom: 20.3vw;
-                    .buttonsContainer {
-                        width: 100%;
-                        display: flex;
-                        justify-content: flex-end;
-                        padding-top: 1rem;
-                        padding-right: 0.5rem;
-                        .gifoButton {
-                            width: 3.2rem;
-                            height: 3.2rem;
-                            margin: 0 0.5rem;
-                            background-size: cover;
-                            &.favoriteBtn {
-                                background: url(../svg/icon-fav.svg);
-                                &:hover {
-                                    background: url(../svg/icon-fav-hover.svg);
-                                }
-                                &:active {
-                                    max-width: 3.2rem;
-                                    max-height: 3.2rem;
-                                    background: url(../svg/icon-fav-active.svg);
-                                    background-size: cover;
-                                    background-position: center;
-                                }
-                            }
-                            &.downloadBtn {
-                                background: url(../svg/icon-download.svg);
-                                &:hover {
-                                    background: url(../svg/icon-download-hover.svg);
-                                }
-                            }
-                            &.maximizeBtn {
-                                background: url(../svg/icon-max-normal.svg);
-                                &:hover {
-                                    background: url(../svg/icon-max-hover.svg);
-                                }
-                            }
-                        }
-                    }
-                    .gifoInfoText{
-                        display: flex;
-                        flex-direction: column;
-                        padding: 8rem 2rem 2rem 2rem;
-                        text-align: start;
-                        p {
-                            color: $whiteColor;
-                            &.trendingGifoOwner {
-                                font-size: 1.5rem;
-                            }
-                            &.trendingGifoName {
-                                font-size: 1.6rem;
-                                font-weight: 700;
-                            }
-                        }
-                    }
-                }
+                color: $greyColor;
+                margin-top: 1.5rem;
             }
         }
     }

@@ -9,50 +9,50 @@ footer {
   font-size: 1.3rem;
 }
 
-footer .socialMedia {
+footer .social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-footer .socialMedia .icon {
+footer .social .social__icon {
   width: 1.8rem;
   height: 1.8rem;
   margin: 0 1rem;
   background-size: cover;
 }
 
-footer .socialMedia .icon:hover {
+footer .social .social__icon:hover {
   cursor: pointer;
   background-size: cover;
 }
 
-footer .socialMedia .icon:nth-child(2) {
+footer .social .social__icon:nth-child(2) {
   margin-left: 2rem;
 }
 
-footer .socialMedia .icon.facebook {
+footer .social .social__icon-facebook {
   width: 0.9rem;
   background: url(../svg/icon_facebook.svg);
 }
 
-footer .socialMedia .icon.facebook:hover {
+footer .social .social__icon-facebook:hover {
   background: url(../svg/icon_facebook_hover.svg);
 }
 
-footer .socialMedia .icon.twitter {
+footer .social .social__icon-twitter {
   background: url(../svg/icon-twitter.svg);
 }
 
-footer .socialMedia .icon.twitter:hover {
+footer .social .social__icon-twitter:hover {
   background: url(../svg/icon-twitter-hover.svg);
 }
 
-footer .socialMedia .icon.instagram {
+footer .social .social__icon-instagram {
   background: url(../svg/icon_instagram.svg);
 }
 
-footer .socialMedia .icon.instagram:hover {
+footer .social .social__icon-instagram:hover {
   background: url(../svg/icon_instagram-hover.svg);
 }
 /*# sourceMappingURL=footer.css.map */
