@@ -2,15 +2,15 @@ import {
     getSearchGiphyArray,
     getTrendingGiphyArray,
     getGiphyAutocomplete
-} from "./modules/_async.js";
+} from "./_async.js";
 
 import {
     searchListener
-} from "./modules/_search.js";
+} from "./_search.js";
 
 import {
     drawTrendingGifos
-} from "./modules/_trending.js";
+} from "./_trending.js";
 
 window.onload = () => {
     let apiKey = 'Ta4raQm67NO2mQWSPCHYL6O0EvldLRJO'
