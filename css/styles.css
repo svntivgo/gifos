@@ -145,7 +145,7 @@ header .searchBarSection .searchBarContainer input {
   padding: 0 5.5rem;
   border: 1px solid #572EE5;
   border-radius: 27px;
-  font: "Roboto" 1.6rem #000;
+  font-size: 1.6rem;
 }
 
 header .searchBarSection .searchBarContainer input::-webkit-input-placeholder {
@@ -179,51 +179,75 @@ header .searchBarSection .searchBarContainer .searchIcon {
   cursor: pointer;
 }
 
-header .searchBarSection .gifoContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+header .searchBarSection .autocompleteBox {
+  display: none;
+  width: 50rem;
+  position: absolute;
+  top: 54rem;
+  padding: 0 5.5rem;
+  background-color: #fff;
+  border: 1px solid #572EE5;
+  border-radius: 0 0 27px 27px;
+}
+
+header .searchBarSection .autocompleteBox .autocompleteTag {
+  font-size: 1.6rem;
+  color: #9CAFC3;
+  margin-top: 1.5rem;
+}
+
+header .searchBarSection .headerTextContainer {
   text-align: center;
 }
 
-header .searchBarSection .gifoContainer h2 {
+header .searchBarSection .headerTextContainer h2 {
   margin-top: 7rem;
   font-size: 1.8rem;
   font-weight: bold;
   line-height: 2.5rem;
 }
 
-header .searchBarSection .gifoContainer .trendingTags {
+header .searchBarSection .headerTextContainer .trendingTags {
   font-size: 1.6rem;
   font-weight: normal;
   line-height: 2.5rem;
 }
 
-header .searchBarSection .gifoContainer .gifoHeader {
-  width: 20vw;
-  height: 20vw;
-  margin: 0 1.5rem;
+header .searchBarSection .gifoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  padding: 0 15rem;
 }
 
-header .searchBarSection .gifoContainer .gifoHeader .gifo {
-  width: 20vw;
-  height: 20vw;
+header .searchBarSection .gifoContainer .gifoHeaderContainer {
+  width: 15vw;
+  height: 15vw;
+  margin: 0.7rem 0.7rem;
 }
 
-header .searchBarSection .gifoContainer .gifoHeader .gifoOverlay {
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifo {
+  width: 15vw;
+  height: 15vw;
+}
+
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  height: 20vw;
+  height: 15vw;
   background-color: rgba(87, 46, 229, 0.7);
   position: relative;
-  bottom: 20.3vw;
+  bottom: 15.3vw;
 }
 
-header .searchBarSection .gifoContainer .gifoHeader .gifoOverlay .buttonsContainer {
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -235,22 +259,22 @@ header .searchBarSection .gifoContainer .gifoHeader .gifoOverlay .buttonsContain
   padding-right: 0.5rem;
 }
 
-header .searchBarSection .gifoContainer .gifoHeader .gifoOverlay .buttonsContainer .gifoButton {
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton {
   width: 3.2rem;
   height: 3.2rem;
   margin: 0 0.5rem;
   background-size: cover;
 }
 
-header .searchBarSection .gifoContainer .gifoHeader .gifoOverlay .buttonsContainer .gifoButton.favoriteBtn {
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.favoriteBtn {
   background: url(../svg/icon-fav.svg);
 }
 
-header .searchBarSection .gifoContainer .gifoHeader .gifoOverlay .buttonsContainer .gifoButton.favoriteBtn:hover {
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.favoriteBtn:hover {
   background: url(../svg/icon-fav-hover.svg);
 }
 
-header .searchBarSection .gifoContainer .gifoHeader .gifoOverlay .buttonsContainer .gifoButton.favoriteBtn:active {
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.favoriteBtn:active {
   max-width: 3.2rem;
   max-height: 3.2rem;
   background: url(../svg/icon-fav-active.svg);
@@ -258,23 +282,23 @@ header .searchBarSection .gifoContainer .gifoHeader .gifoOverlay .buttonsContain
   background-position: center;
 }
 
-header .searchBarSection .gifoContainer .gifoHeader .gifoOverlay .buttonsContainer .gifoButton.downloadBtn {
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.downloadBtn {
   background: url(../svg/icon-download.svg);
 }
 
-header .searchBarSection .gifoContainer .gifoHeader .gifoOverlay .buttonsContainer .gifoButton.downloadBtn:hover {
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.downloadBtn:hover {
   background: url(../svg/icon-download-hover.svg);
 }
 
-header .searchBarSection .gifoContainer .gifoHeader .gifoOverlay .buttonsContainer .gifoButton.maximizeBtn {
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.maximizeBtn {
   background: url(../svg/icon-max-normal.svg);
 }
 
-header .searchBarSection .gifoContainer .gifoHeader .gifoOverlay .buttonsContainer .gifoButton.maximizeBtn:hover {
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.maximizeBtn:hover {
   background: url(../svg/icon-max-hover.svg);
 }
 
-header .searchBarSection .gifoContainer .gifoHeader .gifoOverlay .gifoInfoText {
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .gifoInfoText {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -286,15 +310,15 @@ header .searchBarSection .gifoContainer .gifoHeader .gifoOverlay .gifoInfoText {
   text-align: start;
 }
 
-header .searchBarSection .gifoContainer .gifoHeader .gifoOverlay .gifoInfoText p {
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .gifoInfoText p {
   color: #fff;
 }
 
-header .searchBarSection .gifoContainer .gifoHeader .gifoOverlay .gifoInfoText p.trendingGifoOwner {
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .gifoInfoText p.trendingGifoOwner {
   font-size: 1.5rem;
 }
 
-header .searchBarSection .gifoContainer .gifoHeader .gifoOverlay .gifoInfoText p.trendingGifoName {
+header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .gifoInfoText p.trendingGifoName {
   font-size: 1.6rem;
   font-weight: 700;
 }
@@ -373,7 +397,7 @@ main .trendingContainer .trendingGifosContainer .trendingGifo .gifo {
   height: 20vw;
 }
 
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoOverlay {
+main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay {
   display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -384,7 +408,7 @@ main .trendingContainer .trendingGifosContainer .trendingGifo .gifoOverlay {
   bottom: 20.3vw;
 }
 
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoOverlay .buttonsContainer {
+main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .buttonsContainer {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -396,22 +420,22 @@ main .trendingContainer .trendingGifosContainer .trendingGifo .gifoOverlay .butt
   padding-right: 0.5rem;
 }
 
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoOverlay .buttonsContainer .gifoButton {
+main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .buttonsContainer .gifoButton {
   width: 3.2rem;
   height: 3.2rem;
   margin: 0 0.5rem;
   background-size: cover;
 }
 
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoOverlay .buttonsContainer .gifoButton.favoriteBtn {
+main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .buttonsContainer .gifoButton.favoriteBtn {
   background: url(../svg/icon-fav.svg);
 }
 
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoOverlay .buttonsContainer .gifoButton.favoriteBtn:hover {
+main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .buttonsContainer .gifoButton.favoriteBtn:hover {
   background: url(../svg/icon-fav-hover.svg);
 }
 
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoOverlay .buttonsContainer .gifoButton.favoriteBtn:active {
+main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .buttonsContainer .gifoButton.favoriteBtn:active {
   max-width: 3.2rem;
   max-height: 3.2rem;
   background: url(../svg/icon-fav-active.svg);
@@ -419,23 +443,23 @@ main .trendingContainer .trendingGifosContainer .trendingGifo .gifoOverlay .butt
   background-position: center;
 }
 
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoOverlay .buttonsContainer .gifoButton.downloadBtn {
+main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .buttonsContainer .gifoButton.downloadBtn {
   background: url(../svg/icon-download.svg);
 }
 
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoOverlay .buttonsContainer .gifoButton.downloadBtn:hover {
+main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .buttonsContainer .gifoButton.downloadBtn:hover {
   background: url(../svg/icon-download-hover.svg);
 }
 
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoOverlay .buttonsContainer .gifoButton.maximizeBtn {
+main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .buttonsContainer .gifoButton.maximizeBtn {
   background: url(../svg/icon-max-normal.svg);
 }
 
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoOverlay .buttonsContainer .gifoButton.maximizeBtn:hover {
+main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .buttonsContainer .gifoButton.maximizeBtn:hover {
   background: url(../svg/icon-max-hover.svg);
 }
 
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoOverlay .gifoInfoText {
+main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .gifoInfoText {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -447,15 +471,15 @@ main .trendingContainer .trendingGifosContainer .trendingGifo .gifoOverlay .gifo
   text-align: start;
 }
 
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoOverlay .gifoInfoText p {
+main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .gifoInfoText p {
   color: #fff;
 }
 
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoOverlay .gifoInfoText p.trendingGifoOwner {
+main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .gifoInfoText p.trendingGifoOwner {
   font-size: 1.5rem;
 }
 
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoOverlay .gifoInfoText p.trendingGifoName {
+main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .gifoInfoText p.trendingGifoName {
   font-size: 1.6rem;
   font-weight: 700;
 }

@@ -1,4 +1,4 @@
-header .headerBar {
+header .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,18 +9,18 @@ header .headerBar {
   border-top: 5px solid #572EE5;
 }
 
-header .headerBar .logo {
+header .navigation .navigation__logo {
   width: 6.6rem;
   height: 6rem;
 }
 
-header .headerBar .navBar {
+header .navigation nav {
   max-height: 6rem;
   margin: auto 0 auto auto;
   padding: 2rem 0;
 }
 
-header .headerBar .navBar .navBarList {
+header .navigation nav .navigation__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,16 +28,16 @@ header .headerBar .navBar .navBarList {
       flex-wrap: nowrap;
 }
 
-header .headerBar .navBar .navBarList .navBarItem {
+header .navigation nav .navigation__menu .navigation__menu-item {
   list-style: none;
   margin-right: 5rem;
 }
 
-header .headerBar .navBar .navBarList .navBarItem:hover {
+header .navigation nav .navigation__menu .navigation__menu-item:hover {
   border-bottom: 2px solid #50E3C2;
 }
 
-header .headerBar .navBar .navBarList .navBarItem a {
+header .navigation nav .navigation__menu .navigation__menu-item a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.3rem;
@@ -46,29 +46,29 @@ header .headerBar .navBar .navBarList .navBarItem a {
   color: #572EE5;
 }
 
-header .headerBar .navBar .navBarList .navBarItem a:active {
+header .navigation nav .navigation__menu .navigation__menu-item a:active {
   color: #9CAFC3;
 }
 
-header .headerBar .newGifoButton {
+header .navigation .navigation__new-button {
   width: 6rem;
   height: 6rem;
   background: url(../svg/button-crear-gifo.svg);
   background-size: cover;
 }
 
-header .headerBar .newGifoButton:hover {
+header .navigation .navigation__new-button:hover {
   background: url(../svg/CTA-crear-gifo-hover.svg);
   background-size: cover;
   cursor: pointer;
 }
 
-header .headerBar .newGifoButton:active {
+header .navigation .navigation__new-button:active {
   background: url(../svg/CTA-crear-gifo-active.svg);
   background-size: cover;
 }
 
-header .searchBarSection {
+header .search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,7 +82,7 @@ header .searchBarSection {
           align-items: center;
 }
 
-header .searchBarSection h1 {
+header .search .search__title {
   width: 60rem;
   font-size: 3.5rem;
   font-weight: bold;
@@ -90,11 +90,11 @@ header .searchBarSection h1 {
   text-align: center;
 }
 
-header .searchBarSection h1 span {
+header .search .search__title span {
   color: #50E3C2;
 }
 
-header .searchBarSection .headerImage {
+header .search .search__image {
   width: 40rem;
   height: 19rem;
   margin-top: 2.4rem;
@@ -102,12 +102,12 @@ header .searchBarSection .headerImage {
   background-size: cover;
 }
 
-header .searchBarSection .searchBarContainer {
+header .search .search__container {
   width: 50rem;
   height: 5rem;
 }
 
-header .searchBarSection .searchBarContainer input {
+header .search .search__container .search__bar {
   width: 50rem;
   height: 5rem;
   padding: 0 5.5rem;
@@ -116,27 +116,27 @@ header .searchBarSection .searchBarContainer input {
   font-size: 1.6rem;
 }
 
-header .searchBarSection .searchBarContainer input::-webkit-input-placeholder {
+header .search .search__container .search__bar::-webkit-input-placeholder {
   font: "Roboto" 1.6rem #9CAFC3;
 }
 
-header .searchBarSection .searchBarContainer input:-ms-input-placeholder {
+header .search .search__container .search__bar:-ms-input-placeholder {
   font: "Roboto" 1.6rem #9CAFC3;
 }
 
-header .searchBarSection .searchBarContainer input::-ms-input-placeholder {
+header .search .search__container .search__bar::-ms-input-placeholder {
   font: "Roboto" 1.6rem #9CAFC3;
 }
 
-header .searchBarSection .searchBarContainer input::placeholder {
+header .search .search__container .search__bar::placeholder {
   font: "Roboto" 1.6rem #9CAFC3;
 }
 
-header .searchBarSection .searchBarContainer input:focus {
+header .search .search__container .search__bar:focus {
   outline: none;
 }
 
-header .searchBarSection .searchBarContainer .searchIcon {
+header .search .search__container .search__icon {
   width: 2rem;
   height: 2rem;
   position: relative;
@@ -147,7 +147,7 @@ header .searchBarSection .searchBarContainer .searchIcon {
   cursor: pointer;
 }
 
-header .searchBarSection .autocompleteBox {
+header .search .search__autocomplete {
   display: none;
   width: 50rem;
   position: absolute;
@@ -158,136 +158,9 @@ header .searchBarSection .autocompleteBox {
   border-radius: 0 0 27px 27px;
 }
 
-header .searchBarSection .autocompleteBox .autocompleteTag {
+header .search .search__autocomplete .autocompleteTag {
   font-size: 1.6rem;
   color: #9CAFC3;
   margin-top: 1.5rem;
-}
-
-header .searchBarSection .headerTextContainer {
-  text-align: center;
-}
-
-header .searchBarSection .headerTextContainer h2 {
-  margin-top: 7rem;
-  font-size: 1.8rem;
-  font-weight: bold;
-  line-height: 2.5rem;
-}
-
-header .searchBarSection .headerTextContainer .trendingTags {
-  font-size: 1.6rem;
-  font-weight: normal;
-  line-height: 2.5rem;
-}
-
-header .searchBarSection .gifoContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  text-align: center;
-  padding: 0 15rem;
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer {
-  width: 15vw;
-  height: 15vw;
-  margin: 0.7rem 0.7rem;
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifo {
-  width: 15vw;
-  height: 15vw;
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  height: 15vw;
-  background-color: rgba(87, 46, 229, 0.7);
-  position: relative;
-  bottom: 15.3vw;
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding-top: 1rem;
-  padding-right: 0.5rem;
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton {
-  width: 3.2rem;
-  height: 3.2rem;
-  margin: 0 0.5rem;
-  background-size: cover;
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.favoriteBtn {
-  background: url(../svg/icon-fav.svg);
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.favoriteBtn:hover {
-  background: url(../svg/icon-fav-hover.svg);
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.favoriteBtn:active {
-  max-width: 3.2rem;
-  max-height: 3.2rem;
-  background: url(../svg/icon-fav-active.svg);
-  background-size: cover;
-  background-position: center;
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.downloadBtn {
-  background: url(../svg/icon-download.svg);
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.downloadBtn:hover {
-  background: url(../svg/icon-download-hover.svg);
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.maximizeBtn {
-  background: url(../svg/icon-max-normal.svg);
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.maximizeBtn:hover {
-  background: url(../svg/icon-max-hover.svg);
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .gifoInfoText {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 8rem 2rem 2rem 2rem;
-  text-align: start;
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .gifoInfoText p {
-  color: #fff;
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .gifoInfoText p.trendingGifoOwner {
-  font-size: 1.5rem;
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .gifoInfoText p.trendingGifoName {
-  font-size: 1.6rem;
-  font-weight: 700;
 }
 /*# sourceMappingURL=header.css.map */
