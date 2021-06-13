@@ -21,6 +21,10 @@ p {
   color: #000;
 }
 
+a {
+  font-family: 'Montserrat';
+}
+
 a:hover {
   -webkit-text-decoration: 2px underline #50E3C2;
           text-decoration: 2px underline #50E3C2;

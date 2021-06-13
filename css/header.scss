@@ -2,142 +2,297 @@
 
 header {
     .navigation {
+        width: 100vw;
+        height: 10rem;
         display: flex;
         justify-content: space-between;
-        padding: 1.6rem 15.6rem;
+        align-items: center;
+        padding: 3rem 2rem;
+        position: fixed;
         border-top: 5px solid $purpleColor;
+        background-color: $whiteColor;
+        z-index: 999;
 
         .navigation__logo {
-            width: 6.6rem;
-            height: 6rem;
+            width: 4.8rem;
+            height: 4.4rem;
+            background-image: url(../svg/logo-mobile.svg);
+            background-size: contain;
+
+            &--dark {
+                background-image: url(../svg/logo-mobile-modo-noct.svg);
+            }
+        }
+
+        .navigation__button {
+            width: 1.5rem;
+            height: 1.4rem;
+            background-image: url(../svg/burger.svg);
+            background-size: contain;
+            position: absolute;
+            right: 5rem;
+
+            &--expanded {
+                background-image: url(../svg/close.svg);
+            }
+
+            &--dark {
+                &--expanded {
+                    background-image: url(../svg/close-modo-noct.svg);
+                }
+            }
+
+            &--dark {
+                background-image: url(../svg/burger-modo-noct.svg);
+            }
         }
 
         nav {
-            max-height: 6rem;
-            margin: auto 0 auto auto;
-            padding: 2rem 0;
 
             .navigation__menu {
                 display: flex;
-                flex-wrap: nowrap;
+                flex-flow: column wrap;
+                align-items: center;
+                width: 100vw;
+                height: 200vw;
+                padding: 3rem 0;
+                position: fixed;
+                top: 10rem;
+                left: 100vw;
+                z-index: 999;
+                background-color: $purpleColor;
+                transition: all 1s ease-in-out;
+
+                &--expanded {
+                    left: 0;
+                }
 
                 .navigation__menu-item {
                     list-style: none;
-                    margin-right: 5rem;
 
-                    &:hover {
-                        border-bottom: 2px solid $greenColor;
-                    }
+                    // &:hover {
+                    //     border-bottom: 2px solid $greenColor;
+                    // }
 
                     a {
                         text-decoration: none;
-                        text-transform: uppercase;
-                        font-size: 1.3rem;
-                        line-height: 2rem;
+                        font-size: 1.5rem;
+                        line-height: 3rem;
                         font-weight: bold;
-                        color: $purpleColor;
+                        color: $whiteColor;
 
                         &:active {
                             color: $greyColor;
                         }
                     }
                 }
+
+                &--dark {
+                    .navigation__menu-item {
+                        a {
+                            color: $whiteColor;
+                        }
+                    }
+                }
+
+                .navigation__separator {
+                    width: 4rem;
+                    margin: 1rem;
+                    border-top: 1px solid #FFFFFF;
+                    opacity: 0.5;
+                }
+
+                &--dark {
+                    background-color: $blackColor
+                }
             }
         }
 
-        .navigation__new-button {
-            width: 6rem;
-            height: 6rem;
-            background: url(../svg/button-crear-gifo.svg);
-            background-size: cover;
+        // .navigation__new-button {
+        //     width: 6rem;
+        //     height: 6rem;
+        //     background-image: url(../svg/button-crear-gifo.svg);
+        //     background-size: cover;
 
-            &:hover {
-                background: url(../svg/CTA-crear-gifo-hover.svg);
-                background-size: cover;
-                cursor: pointer;
-            }
+        //     &:hover {
+        //         background-image: url(../svg/CTA-crear-gifo-hover.svg);
+        //         background-size: cover;
+        //         cursor: pointer;
+        //     }
 
-            &:active {
-                background: url(../svg/CTA-crear-gifo-active.svg);
-                background-size: cover;
-            }
+        //     &:active {
+        //         background-image: url(../svg/CTA-crear-gifo-active.svg);
+        //         background-size: cover;
+        //     }
+
+        //     &--dark {
+        //         background-image: url(../svg/CTA-crear-gifo-modo-noc.svg);
+        //         background-size: cover;
+
+        //         &:hover {
+        //             background-image: url(../svg/CTA-crear-gifo-hover-modo-noc.svg);
+        //             background-size: cover;
+        //         }
+
+        //         &:active {
+        //             background-image: url(../svg/CTA-crear-gifo-active-modo-noc.svg);
+        //             background-size: cover;
+        //         }
+        //     }
+        // }
+
+        &--dark {
+            background-color: $darkModeSoft;
+            border-top: 5px solid $blackColor;
         }
     }
 
     .search {
         display: flex;
         flex-direction: column;
-        padding: 8rem 0;
+        padding: 11rem 0;
         align-items: center;
 
+        &--dark {
+            background-color: $darkModeSoft;
+        }
+
         h1.search__title {
-            width: 60rem;
-            font-size: 3.5rem;
+            padding: 4.5rem;
+            font-size: 2.5rem;
             font-weight: bold;
-            line-height: 5rem;
+            line-height: 3.3rem;
             text-align: center;
 
             span {
                 color: $greenColor;
             }
+
+            &--dark {
+                color: $whiteColor;
+            }
         }
 
         .search__image {
-            width: 40rem;
-            height: 19rem;
-            margin-top: 2.4rem;
-            background: url(../svg/ilustra_header.svg);
+            margin: 0 4.5rem;
+            min-width: 27.3rem;
+            min-height: 13rem;
+            background-image: url(../svg/ilustra_header.svg);
             background-size: cover;
         }
 
         .search__container {
-            width: 50rem;
-            height: 5rem;
-
             .search__bar {
-                width: 50rem;
+                width: 80vw;
+                max-width: 50rem;
                 height: 5rem;
                 padding: 0 5.5rem;
+                background: transparent;
                 border: 1px solid $purpleColor;
                 border-radius: 27px;
                 font-size: 1.6rem;
+                font: 1.6rem 'Roboto';
 
                 &::placeholder {
-                    font: 'Roboto'1.6rem $greyColor;
+                    color: $greyColor;
                 }
 
                 &:focus {
                     outline: none;
+                }
+
+                &--dark {
+                    color: $whiteColor;
+                    border-color: $whiteColor;
                 }
             }
 
             .search__icon {
                 width: 2rem;
                 height: 2rem;
-                position: relative;
-                left: 45rem;
-                bottom: 3.5rem;
-                background: url(../svg/icon-search.svg);
+                position: absolute;
+                right: 5rem;
+                top: 44.5rem;
+                background-image: url(../svg/icon-search.svg);
                 background-size: cover;
                 cursor: pointer;
+
+                &--dark {
+                    background-image: url(../svg/icon-search-mod-noc.svg);
+                }
             }
-        }
 
-        .search__autocomplete {
-            display: none;
-            width: 50rem;
-            position: absolute;
-            top: 54rem;
-            padding: 0 5.5rem;
-            background-color: $whiteColor;
-            border: 1px solid $purpleColor;
-            border-radius: 0 0 27px 27px;
-
-            .autocompleteTag {
+            .search__autocomplete {
+                width: 80vw;
+                max-width: 50rem;
+                height: 5rem;
+                padding: 0 3rem;
+                display: none;
+                position: relative;
+                top: -2.1rem;
+                padding: 0 5.5rem 3rem 5.5rem;
+                background-color: $whiteColor;
+                border: 1px solid $purpleColor;
+                border-top: 0;
+                border-radius: 0 0 27px 27px;
                 font-size: 1.6rem;
-                color: $greyColor;
-                margin-top: 1.5rem;
+    
+                .search__tag-container {
+                    display: flex;
+                    height: 3rem;
+                    align-items: center;
+    
+                    .search__tag-icon {
+                        width: 1.6rem;
+                        height: 1.6rem;
+                        margin-right: 1.5rem;
+                        background-image: url(../svg/icon-search-modo-noct.svg);
+                        background-size: cover;
+                    }
+        
+                    .search__autocomplete-tag {
+                        color: $greyColor;
+                    }
+                }
+    
+                &--dark {
+                    background-color: $darkModeSoft;
+                    border-color: $whiteColor;
+                }
             }
         }
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    header .search .search__container .search__icon {
+        right: 7rem;
+    }
+}
+
+@media only screen and (min-width: 412px) {
+    header .search .search__container .search__icon {
+        right: 9rem;
+        top: 41.3rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    header .search .search__container div.search__icon {
+        right: 12rem;
+    }
+}
+
+@media only screen and (min-width: 680px) {
+    header .search .search__container div.search__icon {
+        right: 15rem;
+    }
+}
+
+@media only screen and (min-width: 741px) {
+    header .search .search__container div.search__icon {
+        position: relative;
+        left: 45rem;
+        top: -3.5rem;
     }
 }

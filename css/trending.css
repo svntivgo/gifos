@@ -1,16 +1,26 @@
 main .trending {
   background-color: #F3F5F8;
-  padding: 7rem 9rem 18rem 9rem;
   text-align: center;
 }
 
-main .trending .trending__tittle {
-  font-size: 2.5rem;
+main .trending h2.trending__title {
+  padding: 0 20vw;
+  font-size: 2rem;
   line-height: 3rem;
 }
 
+main .trending h2.trending__title--dark {
+  color: #fff;
+}
+
 main .trending .trending__text {
-  font-size: 1.8rem;
+  padding: 0 20vw;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+}
+
+main .trending .trending__text--dark {
+  color: #fff;
 }
 
 main .trending .trending__container {
@@ -29,6 +39,7 @@ main .trending .trending__container {
 }
 
 main .trending .trending__container .trending__arrow {
+  display: none;
   width: 4rem;
   height: 4rem;
   background-size: cover;
@@ -40,19 +51,19 @@ main .trending .trending__container .trending__arrow:hover {
 }
 
 main .trending .trending__container .trending__arrow-left {
-  background: url(../svg/button-slider-left.svg);
+  background-image: url(../svg/button-slider-left.svg);
 }
 
 main .trending .trending__container .trending__arrow-left:hover {
-  background: url(../svg/button-slider-left-hover.svg);
+  background-image: url(../svg/button-slider-left-hover.svg);
 }
 
 main .trending .trending__container .trending__arrow-right {
-  background: url(../svg/Button-Slider-right.svg);
+  background-image: url(../svg/Button-Slider-right.svg);
 }
 
 main .trending .trending__container .trending__arrow-right:hover {
-  background: url(../svg/button-slider-right-hover.svg);
+  background-image: url(../svg/button-slider-right-hover.svg);
 }
 
 main .trending .trending__container .trending__gifos-container {
@@ -91,6 +102,9 @@ main .trending .trending__container .trending__gifos-container .trending__gifo .
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 1rem;
   padding-right: 0.5rem;
 }
@@ -103,35 +117,35 @@ main .trending .trending__container .trending__gifos-container .trending__gifo .
 }
 
 main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite {
-  background: url(../svg/icon-fav.svg);
+  background-image: url(../svg/icon-fav.svg);
 }
 
 main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite:hover {
-  background: url(../svg/icon-fav-hover.svg);
+  background-image: url(../svg/icon-fav-hover.svg);
 }
 
 main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite:active {
-  max-width: 3.2rem;
-  max-height: 3.2rem;
-  background: url(../svg/icon-fav-active.svg);
+  width: 2.8rem;
+  height: 2.5rem;
+  background-image: url(../svg/icon-fav-active.svg);
   background-size: cover;
   background-position: center;
 }
 
 main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-download {
-  background: url(../svg/icon-download.svg);
+  background-image: url(../svg/icon-download.svg);
 }
 
 main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-download:hover {
-  background: url(../svg/icon-download-hover.svg);
+  background-image: url(../svg/icon-download-hover.svg);
 }
 
 main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-maximize {
-  background: url(../svg/icon-max-normal.svg);
+  background-image: url(../svg/icon-max-normal.svg);
 }
 
 main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-maximize:hover {
-  background: url(../svg/icon-max-hover.svg);
+  background-image: url(../svg/icon-max-hover.svg);
 }
 
 main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-text-container {
@@ -157,5 +171,9 @@ main .trending .trending__container .trending__gifos-container .trending__gifo .
 main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-text-container p.trending__gifo-title {
   font-size: 1.6rem;
   font-weight: 700;
+}
+
+main .trending--dark {
+  background: #222326;
 }
 /*# sourceMappingURL=trending.css.map */

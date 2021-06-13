@@ -30,7 +30,7 @@ a:active {
   color: #9CAFC3;
 }
 
-header .headerBar {
+header .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,18 +41,24 @@ header .headerBar {
   border-top: 5px solid #572EE5;
 }
 
-header .headerBar .logo {
+header .navigation .navigation__logo {
   width: 6.6rem;
   height: 6rem;
+  background-image: url(../svg/logo-desktop.svg);
+  background-size: cover;
 }
 
-header .headerBar .navBar {
+header .navigation .navigation__logo--dark {
+  background-image: url(../svg/Logo-modo-noc.svg);
+}
+
+header .navigation nav {
   max-height: 6rem;
   margin: auto 0 auto auto;
   padding: 2rem 0;
 }
 
-header .headerBar .navBar .navBarList {
+header .navigation nav .navigation__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,16 +66,16 @@ header .headerBar .navBar .navBarList {
       flex-wrap: nowrap;
 }
 
-header .headerBar .navBar .navBarList .navBarItem {
+header .navigation nav .navigation__menu .navigation__menu-item {
   list-style: none;
   margin-right: 5rem;
 }
 
-header .headerBar .navBar .navBarList .navBarItem:hover {
+header .navigation nav .navigation__menu .navigation__menu-item:hover {
   border-bottom: 2px solid #50E3C2;
 }
 
-header .headerBar .navBar .navBarList .navBarItem a {
+header .navigation nav .navigation__menu .navigation__menu-item a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.3rem;
@@ -78,29 +84,29 @@ header .headerBar .navBar .navBarList .navBarItem a {
   color: #572EE5;
 }
 
-header .headerBar .navBar .navBarList .navBarItem a:active {
+header .navigation nav .navigation__menu .navigation__menu-item a:active {
   color: #9CAFC3;
 }
 
-header .headerBar .newGifoButton {
+header .navigation .navigation__new-button {
   width: 6rem;
   height: 6rem;
   background: url(../svg/button-crear-gifo.svg);
   background-size: cover;
 }
 
-header .headerBar .newGifoButton:hover {
+header .navigation .navigation__new-button:hover {
   background: url(../svg/CTA-crear-gifo-hover.svg);
   background-size: cover;
   cursor: pointer;
 }
 
-header .headerBar .newGifoButton:active {
+header .navigation .navigation__new-button:active {
   background: url(../svg/CTA-crear-gifo-active.svg);
   background-size: cover;
 }
 
-header .searchBarSection {
+header .search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,7 +120,7 @@ header .searchBarSection {
           align-items: center;
 }
 
-header .searchBarSection h1 {
+header .search h1.search__title {
   width: 60rem;
   font-size: 3.5rem;
   font-weight: bold;
@@ -122,11 +128,11 @@ header .searchBarSection h1 {
   text-align: center;
 }
 
-header .searchBarSection h1 span {
+header .search h1.search__title span {
   color: #50E3C2;
 }
 
-header .searchBarSection .headerImage {
+header .search .search__image {
   width: 40rem;
   height: 19rem;
   margin-top: 2.4rem;
@@ -134,12 +140,12 @@ header .searchBarSection .headerImage {
   background-size: cover;
 }
 
-header .searchBarSection .searchBarContainer {
+header .search .search__container {
   width: 50rem;
   height: 5rem;
 }
 
-header .searchBarSection .searchBarContainer input {
+header .search .search__container .search__bar {
   width: 50rem;
   height: 5rem;
   padding: 0 5.5rem;
@@ -148,27 +154,27 @@ header .searchBarSection .searchBarContainer input {
   font-size: 1.6rem;
 }
 
-header .searchBarSection .searchBarContainer input::-webkit-input-placeholder {
+header .search .search__container .search__bar::-webkit-input-placeholder {
   font: "Roboto" 1.6rem #9CAFC3;
 }
 
-header .searchBarSection .searchBarContainer input:-ms-input-placeholder {
+header .search .search__container .search__bar:-ms-input-placeholder {
   font: "Roboto" 1.6rem #9CAFC3;
 }
 
-header .searchBarSection .searchBarContainer input::-ms-input-placeholder {
+header .search .search__container .search__bar::-ms-input-placeholder {
   font: "Roboto" 1.6rem #9CAFC3;
 }
 
-header .searchBarSection .searchBarContainer input::placeholder {
+header .search .search__container .search__bar::placeholder {
   font: "Roboto" 1.6rem #9CAFC3;
 }
 
-header .searchBarSection .searchBarContainer input:focus {
+header .search .search__container .search__bar:focus {
   outline: none;
 }
 
-header .searchBarSection .searchBarContainer .searchIcon {
+header .search .search__container .search__icon {
   width: 2rem;
   height: 2rem;
   position: relative;
@@ -179,7 +185,7 @@ header .searchBarSection .searchBarContainer .searchIcon {
   cursor: pointer;
 }
 
-header .searchBarSection .autocompleteBox {
+header .search .search__autocomplete {
   display: none;
   width: 50rem;
   position: absolute;
@@ -187,301 +193,14 @@ header .searchBarSection .autocompleteBox {
   padding: 0 5.5rem;
   background-color: #fff;
   border: 1px solid #572EE5;
+  border-top: 0;
   border-radius: 0 0 27px 27px;
 }
 
-header .searchBarSection .autocompleteBox .autocompleteTag {
+header .search .search__autocomplete .autocompleteTag {
   font-size: 1.6rem;
   color: #9CAFC3;
   margin-top: 1.5rem;
-}
-
-header .searchBarSection .headerTextContainer {
-  text-align: center;
-}
-
-header .searchBarSection .headerTextContainer h2 {
-  margin-top: 7rem;
-  font-size: 1.8rem;
-  font-weight: bold;
-  line-height: 2.5rem;
-}
-
-header .searchBarSection .headerTextContainer .trendingTags {
-  font-size: 1.6rem;
-  font-weight: normal;
-  line-height: 2.5rem;
-}
-
-header .searchBarSection .gifoContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  text-align: center;
-  padding: 0 15rem;
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer {
-  width: 15vw;
-  height: 15vw;
-  margin: 0.7rem 0.7rem;
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifo {
-  width: 15vw;
-  height: 15vw;
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  height: 15vw;
-  background-color: rgba(87, 46, 229, 0.7);
-  position: relative;
-  bottom: 15.3vw;
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding-top: 1rem;
-  padding-right: 0.5rem;
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton {
-  width: 3.2rem;
-  height: 3.2rem;
-  margin: 0 0.5rem;
-  background-size: cover;
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.favoriteBtn {
-  background: url(../svg/icon-fav.svg);
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.favoriteBtn:hover {
-  background: url(../svg/icon-fav-hover.svg);
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.favoriteBtn:active {
-  max-width: 3.2rem;
-  max-height: 3.2rem;
-  background: url(../svg/icon-fav-active.svg);
-  background-size: cover;
-  background-position: center;
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.downloadBtn {
-  background: url(../svg/icon-download.svg);
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.downloadBtn:hover {
-  background: url(../svg/icon-download-hover.svg);
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.maximizeBtn {
-  background: url(../svg/icon-max-normal.svg);
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .buttonsContainer .gifoButton.maximizeBtn:hover {
-  background: url(../svg/icon-max-hover.svg);
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .gifoInfoText {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 8rem 2rem 2rem 2rem;
-  text-align: start;
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .gifoInfoText p {
-  color: #fff;
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .gifoInfoText p.trendingGifoOwner {
-  font-size: 1.5rem;
-}
-
-header .searchBarSection .gifoContainer .gifoHeaderContainer .gifoHeaderOverlay .gifoInfoText p.trendingGifoName {
-  font-size: 1.6rem;
-  font-weight: 700;
-}
-
-main {
-  background-color: #F3F5F8;
-  padding: 7rem 9rem 18rem 9rem;
-  text-align: center;
-}
-
-main h2 {
-  font-size: 2.5rem;
-  line-height: 3rem;
-}
-
-main p {
-  font-size: 1.8rem;
-}
-
-main .trendingContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 5rem;
-}
-
-main .trendingContainer .arrow {
-  width: 4rem;
-  height: 4rem;
-  background-size: cover;
-}
-
-main .trendingContainer .arrow:hover {
-  cursor: pointer;
-  background-size: cover;
-}
-
-main .trendingContainer .arrow.prev {
-  background: url(../svg/button-slider-left.svg);
-}
-
-main .trendingContainer .arrow.prev:hover {
-  background: url(../svg/button-slider-left-hover.svg);
-}
-
-main .trendingContainer .arrow.next {
-  background: url(../svg/Button-Slider-right.svg);
-}
-
-main .trendingContainer .arrow.next:hover {
-  background: url(../svg/button-slider-right-hover.svg);
-}
-
-main .trendingContainer .trendingGifosContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-main .trendingContainer .trendingGifosContainer .trendingGifo {
-  width: 20vw;
-  height: 20vw;
-  margin: 0 1.5rem;
-}
-
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifo {
-  width: 20vw;
-  height: 20vw;
-}
-
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay {
-  display: none;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  height: 20vw;
-  background-color: rgba(87, 46, 229, 0.7);
-  position: relative;
-  bottom: 20.3vw;
-}
-
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .buttonsContainer {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding-top: 1rem;
-  padding-right: 0.5rem;
-}
-
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .buttonsContainer .gifoButton {
-  width: 3.2rem;
-  height: 3.2rem;
-  margin: 0 0.5rem;
-  background-size: cover;
-}
-
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .buttonsContainer .gifoButton.favoriteBtn {
-  background: url(../svg/icon-fav.svg);
-}
-
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .buttonsContainer .gifoButton.favoriteBtn:hover {
-  background: url(../svg/icon-fav-hover.svg);
-}
-
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .buttonsContainer .gifoButton.favoriteBtn:active {
-  max-width: 3.2rem;
-  max-height: 3.2rem;
-  background: url(../svg/icon-fav-active.svg);
-  background-size: cover;
-  background-position: center;
-}
-
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .buttonsContainer .gifoButton.downloadBtn {
-  background: url(../svg/icon-download.svg);
-}
-
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .buttonsContainer .gifoButton.downloadBtn:hover {
-  background: url(../svg/icon-download-hover.svg);
-}
-
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .buttonsContainer .gifoButton.maximizeBtn {
-  background: url(../svg/icon-max-normal.svg);
-}
-
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .buttonsContainer .gifoButton.maximizeBtn:hover {
-  background: url(../svg/icon-max-hover.svg);
-}
-
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .gifoInfoText {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 8rem 2rem 2rem 2rem;
-  text-align: start;
-}
-
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .gifoInfoText p {
-  color: #fff;
-}
-
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .gifoInfoText p.trendingGifoOwner {
-  font-size: 1.5rem;
-}
-
-main .trendingContainer .trendingGifosContainer .trendingGifo .gifoTrendingOverlay .gifoInfoText p.trendingGifoName {
-  font-size: 1.6rem;
-  font-weight: 700;
 }
 
 footer {
@@ -495,50 +214,50 @@ footer {
   font-size: 1.3rem;
 }
 
-footer .socialMedia {
+footer .social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-footer .socialMedia .icon {
+footer .social .social__icon {
   width: 1.8rem;
   height: 1.8rem;
   margin: 0 1rem;
   background-size: cover;
 }
 
-footer .socialMedia .icon:hover {
+footer .social .social__icon:hover {
   cursor: pointer;
   background-size: cover;
 }
 
-footer .socialMedia .icon:nth-child(2) {
+footer .social .social__icon:nth-child(2) {
   margin-left: 2rem;
 }
 
-footer .socialMedia .icon.facebook {
+footer .social .social__icon-facebook {
   width: 0.9rem;
   background: url(../svg/icon_facebook.svg);
 }
 
-footer .socialMedia .icon.facebook:hover {
+footer .social .social__icon-facebook:hover {
   background: url(../svg/icon_facebook_hover.svg);
 }
 
-footer .socialMedia .icon.twitter {
+footer .social .social__icon-twitter {
   background: url(../svg/icon-twitter.svg);
 }
 
-footer .socialMedia .icon.twitter:hover {
+footer .social .social__icon-twitter:hover {
   background: url(../svg/icon-twitter-hover.svg);
 }
 
-footer .socialMedia .icon.instagram {
+footer .social .social__icon-instagram {
   background: url(../svg/icon_instagram.svg);
 }
 
-footer .socialMedia .icon.instagram:hover {
+footer .social .social__icon-instagram:hover {
   background: url(../svg/icon_instagram-hover.svg);
 }
 /*# sourceMappingURL=styles.css.map */

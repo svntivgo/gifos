@@ -6,7 +6,7 @@ let gifosfav = localStorage.getItem("test") ? JSON.parse(localStorage.getItem('t
 
 /**
  * Draws gifs on results section
- * @param {array} response from _async.js
+ * @param {array} response from async.js
  */
 function drawGifos(response) {
 
