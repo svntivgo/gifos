@@ -1,12 +1,30 @@
 @import 'variables';
 
-footer {
+.footer {
     display: flex;
-    justify-content: space-between;
-    padding: 5rem 15rem;
-    font-size: 1.3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5rem 0;
+    font-size: 1.5rem;
+    
+    &--dark {
+        background: $darkModeSoft;
+    }
     .social {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 2.5rem;
+        
+        .social__text {
+            width: 95vw;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            &--dark {
+                color: $whiteColor;
+            }
+        }
+
         .social__icon {
             width: 1.8rem;
             height: 1.8rem;
@@ -14,30 +32,50 @@ footer {
             background-size: cover;
             &:hover{
                 cursor: pointer;
-                background-size: cover;
+                // background-size: cover;
             }
             &:nth-child(2) {
                 margin-left: 2rem;
             }
             &-facebook {
                 width: 0.9rem;
-                background: url(../svg/icon_facebook.svg);
+                background-image: url(../svg/icon_facebook.svg);
                 &:hover {
-                    background: url(../svg/icon_facebook_hover.svg);
+                    background-image: url(../svg/icon_facebook_hover.svg);
+                }
+
+                &--dark {
+                    background-image: url(../svg/icon_facebook_noc.svg);
                 }
             }
             &-twitter {
-                background: url(../svg/icon-twitter.svg);
+                background-image: url(../svg/icon-twitter.svg);
                 &:hover {
-                    background: url(../svg/icon-twitter-hover.svg);
+                    background-image: url(../svg/icon-twitter-hover.svg);
+                }
+
+                &--dark {
+                    background-image: url(../svg/icon_twitter_noc.svg);
                 }
             }
             &-instagram {
-                background: url(../svg/icon_instagram.svg);
+                background-image: url(../svg/icon_instagram.svg);
                 &:hover {
-                    background: url(../svg/icon_instagram-hover.svg);
+                    background-image: url(../svg/icon_instagram-hover.svg);
+                }
+
+                &--dark {
+                    background-image: url(../svg/icon_instagram_noc.svg);
                 }
             }
+        }
+    }
+
+    .copyrights {
+        width: 95vw;
+        text-align: center;
+        &--dark {
+            color: $whiteColor;
         }
     }
 }

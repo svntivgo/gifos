@@ -2,7 +2,7 @@ export { drawTrendingGifos };
 
 /**
  * Draws trending gifs on trending section
- * @param {array} response taken from _async.js
+ * @param {array} response taken from async.js
  */
 function drawTrendingGifos(response) {
     for (let i = 0; i < 3; i++) {

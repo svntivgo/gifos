@@ -16,43 +16,46 @@
 
 <body>
     <header>
-        <section class="navigation">
-            <img src="svg/logo-desktop.svg" alt="logo gifos" class="navigation__logo">
+        <section class="navigation" id="navigation">
+            <div class="navigation__logo" id="navigation__logo"></div>
+            <div class="navigation__button" id="navigation__button"></div>
             <nav>
-                <ul class="navigation__menu">
-                    <li class="navigation__menu-item"><a href="#" target="_self" rel="noopener noreferrer">Modo
-                            nocturno</a></li>
-                    <li class="navigation__menu-item"><a href="#" target="_self" rel="noopener noreferrer">Favoritos</a>
+                <ul class="navigation__menu" id="navigation__menu">
+                    <li class="navigation__menu-item"><a href="#" target="_self" rel="noopener noreferrer" id="navigation__dark-mode">Modo Nocturno</a>
                     </li>
-                    <li class="navigation__menu-item"><a href="#" target="_self" rel="noopener noreferrer">Mis Gifos</a>
+                    <div class="navigation__separator"></div>
+                    <li class="navigation__menu-item"><a href="#" target="_self" rel="noopener noreferrer " id="navigation__favorites">Favoritos</a>
+                    </li>
+                    <div class="navigation__separator"></div>
+                    <li class="navigation__menu-item"><a href="#" target="_self" rel="noopener noreferrer" id="navigation__user-gifos">Mis Gifos</a>
                     </li>
                 </ul>
             </nav>
             <div class="navigation__new-button" id="navigation__new-button"></div>
         </section>
-        <section class="search">
-            <h1 class="search__title">Inspírate, busca, guarda, y crea los mejores <span>GIFOS</span></h1>
+        <section class="search" id="search">
+            <h1 class="search__title" id="search__title">Inspírate, busca, guarda, y crea los mejores <span>GIFOS</span></h1>
             <div class="search__image"></div>
             <div class="search__container">
                 <input type="search" name="searchBar" class="search__bar" id="search__bar" placeholder="Busca GIFOS y más">
                 <div class="search__icon" id="search__icon"></div>
-            </div>
-            <div class="search__autocomplete" id="search__autocomplete">
-                <!-- all suggestions will be here -->
+                <div class="search__autocomplete" id="search__autocomplete">
+                    <!-- all suggestions will be here -->
+                </div>
             </div>
         </section>
     </header>
     <main>
-        <section class="results">
+        <section class="results" id="results">
             <h2 class="results__title" id="results__title">Trending:</h2>
             <h3 class="results__tags" id="results__tags">Reactions, Entertainment, Sports, Stickers, Artists</h3>
             <div class="results__container" id="results__container">
                 <!-- all gifos will be here -->
             </div>
         </section>
-        <section class="trending">
-            <h2 class="trending__title">Trending GIFOS</h2>
-            <p class="trending__text">Mira los últimos GIFO de nuestra comunidad.</p>
+        <section class="trending" id="trending">
+            <h2 class="trending__title" id="trending__title">Trending GIFOS</h2>
+            <p class="trending__text" id="trending__text">Mira los últimos GIFO de nuestra comunidad.</p>
             <div class="trending__container" id="trending__container">
                 <div class="trending__arrow-left" id="trending__arrow-left"></div>
                 <div class="trending__gifos-container" id="trending__gifos-container">
@@ -73,10 +76,10 @@
                     <div class="trending__gifo">
                         <img class="trending__img" src="https://via.placeholder.com/357x275" alt="">
                         <div class="trending__overlay">
-                            <div class="trending__buttons-container">
-                                <div class="trending__button trending__button-favorite"></div>
-                                <div class="trending__button trending__button-download"></div>
-                                <div class="trending__button trending__button-maximize"></div>
+                            <div class="trending__gifo-buttons-container">
+                                <div class="trending__gifo-button trending__gifo-button-favorite"></div>
+                                <div class="trending__gifo-button trending__gifo-button-download"></div>
+                                <div class="trending__gifo-button trending__gifo-button-maximize"></div>
                             </div>
                             <div class="trending__gifo-text-container">
                                 <p class="trending__gifo-owner">User</p>
@@ -87,10 +90,10 @@
                     <div class="trending__gifo">
                         <img class="trending__img" src="https://via.placeholder.com/357x275" alt="">
                         <div class="trending__overlay">
-                            <div class="trending__buttons-container">
-                                <div class="trending__button trending__button-favorite"></div>
-                                <div class="trending__button trending__button-download"></div>
-                                <div class="trending__button trending__button-maximize"></div>
+                            <div class="trending__gifo-buttons-container">
+                                <div class="trending__gifo-button trending__gifo-button-favorite"></div>
+                                <div class="trending__gifo-button trending__gifo-button-download"></div>
+                                <div class="trending__gifo-button trending__gifo-button-maximize"></div>
                             </div>
                             <div class="trending__gifo-text-container">
                                 <p class="trending__gifo-owner">User</p>
@@ -105,15 +108,15 @@
     </main>
 </body>
 
-<footer>
-    <section class="social">
-        <p class="social__text">Compartir en:</p>
-        <div class="social__icon social__icon-facebook"><a href="#" target="_blank" rel="noopener noreferrer"></a></div>
-        <div class="social__icon social__icon-twitter"><a href="#" target="_blank" rel="noopener noreferrer"></a></div>
-        <div class="social__icon social__icon-instagram"><a href="#" target="_blank" rel="noopener noreferrer"></a>
+<footer class="footer" id="footer">
+    <section class="social" id="social">
+        <p class="social__text" id="social__text">Compartir en:</p>
+        <div class="social__icon social__icon-facebook" id="social__icon-facebook"><a href="#" target="_blank" rel="noopener noreferrer"></a></div>
+        <div class="social__icon social__icon-twitter" id="social__icon-twitter"><a href="#" target="_blank" rel="noopener noreferrer"></a></div>
+        <div class="social__icon social__icon-instagram" id="social__icon-instagram"><a href="#" target="_blank" rel="noopener noreferrer"></a>
         </div>
     </section>
-    <p class="copyrights">© GIFOS 2021 All Rights Reserved.</p>
+    <p class="copyrights" id="copyrights">© GIFOS 2021 All Rights Reserved.</p>
 </footer>
 
 </html>
