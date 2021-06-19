@@ -1,6 +1,5 @@
-export {menuButton}
 
-function menuButton() {
+export function burgerButton() {
     let navigationButton = document.getElementById('navigation__button')
     let navigationMenu = document.getElementById('navigation__menu')
     navigationButton.addEventListener('click', () => {
