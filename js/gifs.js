@@ -1,13 +1,14 @@
+import * as button from "./button.js"
 
 /**
  * Draws the gifos with overlay and buttons functionality
  * @param {JSON} response is the array that contains all gifs info
- * @param {string} sectionClass is the section where be drawed the gifs
+ * @param {string} section is the section where be drawed the gifs
  */
-export function painter(response, sectionClass) {
-    let sectionContainer = document.getElementById(`${sectionClass}__container`)
-    let gifoContainer = document.getElementsByClassName(`${sectionClass}__gifo-container`)
-    let overlay = document.getElementsByClassName(`${sectionClass}__overlay`)
+export function painter(response, section) {
+    let sectionContainer = document.getElementById(`${section}__container`)
+    let gifoContainer = document.getElementsByClassName(`${section}__gifo-container`)
+    let overlay = document.getElementsByClassName(`${section}__overlay`)
     let newContainer
     let imgUrl
     let owner
@@ -17,20 +18,24 @@ export function painter(response, sectionClass) {
         owner = response[i].username
         title = response[i].title
         newContainer = document.createElement('div')
-        newContainer.className = (`${sectionClass}__gifo-container`)
+        newContainer.className = (`${section}__gifo-container`)
+        newContainer.id = (`${section}__gifo-container-${i}`)
         newContainer.innerHTML = (`
-                            <img class="${sectionClass}__img" src="${imgUrl}" alt="">
-                            <div class="${sectionClass}__overlay">
-                                <div class="${sectionClass}__gifo-buttons-container">
-                                    <div class="${sectionClass}__gifo-button ${sectionClass}__gifo-button-favorite" id="favbtn${i}"></div>
-                                    <div class="${sectionClass}__gifo-button ${sectionClass}__gifo-button-download"></div>
-                                    <div class="${sectionClass}__gifo-button ${sectionClass}__gifo-button-maximize"></div>
-                                </div>
-                                <div class="${sectionClass}__gifo-text-container">
-                                    <p class="${sectionClass}__gifo-owner">${owner}</p>
-                                    <p class="${sectionClass}__gifo-title">${title}</p>
-                                </div>
-                            </div>
+            <div class="${section}__close" id="${section}__close-${i}"></div>
+            <img class="${section}__img" id="${section}__img-${i}" src="${imgUrl}" alt="">
+            <div class="${section}__overlay" id="${section}__overlay-${i}">
+                <div class="${section}__gifo-buttons-container" id="${section}__gifo-buttons-container-${i}">
+                    <div class="${section}__gifo-button ${section}__gifo-button-favorite" id="${section}__gifo-button-favorite-${i}"></div>
+                    <div class="${section}__gifo-button ${section}__gifo-button-download" id="${section}__gifo-button-download-${i}">
+                        <a href="https://media4.giphy.com/media/${response[i].id}/giphy.gif" target="_self" rel="noopener noreferrer" id="${section}__gifourl-${i}"></a>
+                    </div>
+                    <div class="${section}__gifo-button ${section}__gifo-button-maximize" id="${section}__gifo-button-maximize-${i}"></div>
+                </div>
+                <div class="${section}__gifo-text-container" id="${section}__gifo-text-container-${i}">
+                    <p class="${section}__gifo-owner">${owner}</p>
+                    <p class="${section}__gifo-title">${title}</p>
+                </div>
+            </div>
         `)
         sectionContainer.appendChild(newContainer)
         gifoContainer[i].addEventListener("mouseenter", () => {
@@ -40,10 +45,6 @@ export function painter(response, sectionClass) {
             overlay[i].style.display = "none"
         })
         overlay[i].style.display = "none"
-        let favbtn = document.getElementById(`favbtn${i}`)
-        favbtn.addEventListener('click', () => {
-            favorites.push(response[i])
-            localStorage.setItem('favorites', JSON.stringify(favorites))
-        })
+        button.gifo(response, i, section)
     }
 }
