@@ -262,6 +262,110 @@ header {
             }
         }
     }
+
+    .gif-max {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: $whiteColor;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        .close {
+            width: 2rem;
+            height: 2rem;
+            align-self: flex-end;
+            margin-right: 10vw;
+            background-image: url('../svg/close.svg');
+            background-size: contain;
+            background-position: bottom;
+
+            &--dark {
+                background-image: url('../svg/close-modo-noct.svg');
+            }
+        }
+
+        img {
+            width: 80vw;
+            height: 80vw;
+            max-width: 50vh;
+            max-height: 50vh;
+            margin-top: 6rem;
+        }
+
+        .gif-max__overlay {
+            display: flex;
+            flex-flow: row-reverse nowrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 80vw;
+            max-width: 50vh;
+            height: 7rem;
+
+            .gif-max__gifo-buttons-container {
+                display: flex;
+
+                .gif-max__gifo-button {
+                    width: 3.2rem;
+                    height: 3.2rem;
+                    margin-left: 1rem;
+                    background-size: cover;
+
+                    &-favorite {
+                        background: url(../svg/icon-fav.svg);
+
+                        &:hover {
+                            background: url(../svg/icon-fav-hover.svg);
+                        }
+
+                        &:active {
+                            max-width: 3.2rem;
+                            max-height: 3.2rem;
+                            background: url(../svg/icon-fav-active.svg);
+                            background-size: cover;
+                            background-position: center;
+                        }
+                    }
+
+                    &-download {
+                        background: url(../svg/icon-download.svg);
+
+                        &:hover {
+                            background: url(../svg/icon-download-hover.svg);
+                        }
+                    }
+
+                    &-maximize {
+                        display: none;
+                        background: url(../svg/icon-max-normal.svg);
+
+                        &:hover {
+                            background: url(../svg/icon-max-hover.svg);
+                        }
+                    }
+                }
+            }
+
+            .gif-max__gifo-text-container {
+
+                p {
+                    color: $blackColor;
+
+                    &.gif-max__gifo-owner {
+                        font-size: 1.5rem;
+                    }
+
+                    &.gif-max__gifo-title {
+                        font-size: 1.6rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 375px) {

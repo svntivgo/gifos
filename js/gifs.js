@@ -1,4 +1,6 @@
 
+let favorites = localStorage.getItem("test") ? JSON.parse(localStorage.getItem('test')) : []
+
 /**
  * Draws the gifos with overlay and buttons functionality
  * @param {JSON} response is the array that contains all gifs info

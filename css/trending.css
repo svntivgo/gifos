@@ -66,24 +66,18 @@ main .trending .trending__container .trending__arrow-right:hover {
   background-image: url(../svg/button-slider-right-hover.svg);
 }
 
-main .trending .trending__container .trending__gifos-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-main .trending .trending__container .trending__gifos-container .trending__gifo {
+main .trending .trending__container .trending__gifo-container {
   width: 20vw;
   height: 20vw;
   margin: 0 1.5rem;
 }
 
-main .trending .trending__container .trending__gifos-container .trending__gifo .trending__img {
+main .trending .trending__container .trending__gifo-container .trending__img {
   width: 20vw;
   height: 20vw;
 }
 
-main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay {
+main .trending .trending__container .trending__gifo-container .trending__overlay {
   display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -94,7 +88,7 @@ main .trending .trending__container .trending__gifos-container .trending__gifo .
   bottom: 20.3vw;
 }
 
-main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container {
+main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -109,22 +103,22 @@ main .trending .trending__container .trending__gifos-container .trending__gifo .
   padding-right: 0.5rem;
 }
 
-main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button {
+main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button {
   width: 3.2rem;
   height: 3.2rem;
   margin: 0 0.5rem;
   background-size: cover;
 }
 
-main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite {
+main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite {
   background-image: url(../svg/icon-fav.svg);
 }
 
-main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite:hover {
+main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite:hover {
   background-image: url(../svg/icon-fav-hover.svg);
 }
 
-main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite:active {
+main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite:active {
   width: 2.8rem;
   height: 2.5rem;
   background-image: url(../svg/icon-fav-active.svg);
@@ -132,23 +126,23 @@ main .trending .trending__container .trending__gifos-container .trending__gifo .
   background-position: center;
 }
 
-main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-download {
+main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-download {
   background-image: url(../svg/icon-download.svg);
 }
 
-main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-download:hover {
+main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-download:hover {
   background-image: url(../svg/icon-download-hover.svg);
 }
 
-main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-maximize {
+main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-maximize {
   background-image: url(../svg/icon-max-normal.svg);
 }
 
-main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-maximize:hover {
+main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-maximize:hover {
   background-image: url(../svg/icon-max-hover.svg);
 }
 
-main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-text-container {
+main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-text-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,15 +154,15 @@ main .trending .trending__container .trending__gifos-container .trending__gifo .
   text-align: start;
 }
 
-main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-text-container p {
+main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-text-container p {
   color: #fff;
 }
 
-main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-text-container p.trending__gifo-owner {
+main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-text-container p.trending__gifo-owner {
   font-size: 1.5rem;
 }
 
-main .trending .trending__container .trending__gifos-container .trending__gifo .trending__overlay .trending__gifo-text-container p.trending__gifo-title {
+main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-text-container p.trending__gifo-title {
   font-size: 1.6rem;
   font-weight: 700;
 }

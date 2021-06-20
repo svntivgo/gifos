@@ -60,93 +60,89 @@ main {
                 }
             }
 
-            .trending__gifos-container {
-                display: flex;
+            .trending__gifo-container {
+                width: 20vw;
+                height: 20vw;
+                margin: 0 1.5rem;
 
-                .trending__gifo {
+                .trending__img {
                     width: 20vw;
                     height: 20vw;
-                    margin: 0 1.5rem;
+                }
 
-                    .trending__img {
-                        width: 20vw;
-                        height: 20vw;
-                    }
+                .trending__overlay {
+                    display: none;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    height: 20vw;
+                    background-color: rgba($color: $purpleColor, $alpha: 0.7);
+                    position: relative;
+                    bottom: 20.3vw;
 
-                    .trending__overlay {
-                        display: none;
-                        flex-wrap: wrap;
+                    .trending__gifo-buttons-container {
                         width: 100%;
-                        height: 20vw;
-                        background-color: rgba($color: $purpleColor, $alpha: 0.7);
-                        position: relative;
-                        bottom: 20.3vw;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        padding-top: 1rem;
+                        padding-right: 0.5rem;
 
-                        .trending__gifo-buttons-container {
-                            width: 100%;
-                            display: flex;
-                            justify-content: flex-end;
-                            align-items: center;
-                            padding-top: 1rem;
-                            padding-right: 0.5rem;
+                        .trending__gifo-button {
+                            width: 3.2rem;
+                            height: 3.2rem;
+                            margin: 0 0.5rem;
+                            background-size: cover;
 
-                            .trending__gifo-button {
-                                width: 3.2rem;
-                                height: 3.2rem;
-                                margin: 0 0.5rem;
-                                background-size: cover;
+                            &-favorite {
+                                background-image: url(../svg/icon-fav.svg);
 
-                                &-favorite {
-                                    background-image: url(../svg/icon-fav.svg);
-
-                                    &:hover {
-                                        background-image: url(../svg/icon-fav-hover.svg);
-                                    }
-
-                                    &:active {
-                                        width: 2.8rem;
-                                        height: 2.5rem;
-                                        background-image: url(../svg/icon-fav-active.svg);
-                                        background-size: cover;
-                                        background-position: center;
-                                    }
+                                &:hover {
+                                    background-image: url(../svg/icon-fav-hover.svg);
                                 }
 
-                                &-download {
-                                    background-image: url(../svg/icon-download.svg);
-
-                                    &:hover {
-                                        background-image: url(../svg/icon-download-hover.svg);
-                                    }
+                                &:active {
+                                    width: 2.8rem;
+                                    height: 2.5rem;
+                                    background-image: url(../svg/icon-fav-active.svg);
+                                    background-size: cover;
+                                    background-position: center;
                                 }
+                            }
 
-                                &-maximize {
-                                    background-image: url(../svg/icon-max-normal.svg);
+                            &-download {
+                                background-image: url(../svg/icon-download.svg);
 
-                                    &:hover {
-                                        background-image: url(../svg/icon-max-hover.svg);
-                                    }
+                                &:hover {
+                                    background-image: url(../svg/icon-download-hover.svg);
+                                }
+                            }
+
+                            &-maximize {
+                                background-image: url(../svg/icon-max-normal.svg);
+
+                                &:hover {
+                                    background-image: url(../svg/icon-max-hover.svg);
                                 }
                             }
                         }
+                    }
 
-                        .trending__gifo-text-container {
-                            display: flex;
-                            flex-direction: column;
-                            padding: 8rem 2rem 2rem 2rem;
-                            text-align: start;
+                    .trending__gifo-text-container {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 8rem 2rem 2rem 2rem;
+                        text-align: start;
 
-                            p {
-                                color: $whiteColor;
+                        p {
+                            color: $whiteColor;
 
-                                &.trending__gifo-owner {
-                                    font-size: 1.5rem;
-                                }
+                            &.trending__gifo-owner {
+                                font-size: 1.5rem;
+                            }
 
-                                &.trending__gifo-title {
-                                    font-size: 1.6rem;
-                                    font-weight: 700;
-                                }
+                            &.trending__gifo-title {
+                                font-size: 1.6rem;
+                                font-weight: 700;
                             }
                         }
                     }

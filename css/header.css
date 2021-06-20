@@ -249,6 +249,129 @@ header .search .search__container .search__autocomplete--dark {
   border-color: #fff;
 }
 
+header .gif-max {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+header .gif-max .close {
+  width: 2rem;
+  height: 2rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 10vw;
+  background-image: url("../svg/close.svg");
+  background-size: contain;
+  background-position: bottom;
+}
+
+header .gif-max .close--dark {
+  background-image: url("../svg/close-modo-noct.svg");
+}
+
+header .gif-max img {
+  width: 80vw;
+  height: 80vw;
+  max-width: 50vh;
+  max-height: 50vh;
+  margin-top: 6rem;
+}
+
+header .gif-max .gif-max__overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse nowrap;
+          flex-flow: row-reverse nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80vw;
+  max-width: 50vh;
+  height: 7rem;
+}
+
+header .gif-max .gif-max__overlay .gif-max__gifo-buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .gif-max .gif-max__overlay .gif-max__gifo-buttons-container .gif-max__gifo-button {
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-left: 1rem;
+  background-size: cover;
+}
+
+header .gif-max .gif-max__overlay .gif-max__gifo-buttons-container .gif-max__gifo-button-favorite {
+  background: url(../svg/icon-fav.svg);
+}
+
+header .gif-max .gif-max__overlay .gif-max__gifo-buttons-container .gif-max__gifo-button-favorite:hover {
+  background: url(../svg/icon-fav-hover.svg);
+}
+
+header .gif-max .gif-max__overlay .gif-max__gifo-buttons-container .gif-max__gifo-button-favorite:active {
+  max-width: 3.2rem;
+  max-height: 3.2rem;
+  background: url(../svg/icon-fav-active.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+header .gif-max .gif-max__overlay .gif-max__gifo-buttons-container .gif-max__gifo-button-download {
+  background: url(../svg/icon-download.svg);
+}
+
+header .gif-max .gif-max__overlay .gif-max__gifo-buttons-container .gif-max__gifo-button-download:hover {
+  background: url(../svg/icon-download-hover.svg);
+}
+
+header .gif-max .gif-max__overlay .gif-max__gifo-buttons-container .gif-max__gifo-button-maximize {
+  display: none;
+  background: url(../svg/icon-max-normal.svg);
+}
+
+header .gif-max .gif-max__overlay .gif-max__gifo-buttons-container .gif-max__gifo-button-maximize:hover {
+  background: url(../svg/icon-max-hover.svg);
+}
+
+header .gif-max .gif-max__overlay .gif-max__gifo-text-container p {
+  color: #000;
+}
+
+header .gif-max .gif-max__overlay .gif-max__gifo-text-container p.gif-max__gifo-owner {
+  font-size: 1.5rem;
+}
+
+header .gif-max .gif-max__overlay .gif-max__gifo-text-container p.gif-max__gifo-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
 @media only screen and (min-width: 375px) {
   header .search .search__container .search__icon {
     right: 7rem;
