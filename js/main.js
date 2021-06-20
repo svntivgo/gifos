@@ -6,7 +6,7 @@ import * as gifs from "./gifs.js";
 
 import * as theme from "./theme.js";
 
-import * as menu from "./menu.js";
+import * as button from "./button.js";
 
 window.onload = () => {
     let apiKey = 'Ta4raQm67NO2mQWSPCHYL6O0EvldLRJO'
@@ -15,7 +15,7 @@ window.onload = () => {
 
     theme.switcher()
     theme.buttonChanger()
-    menu.burgerButton()
+    button.burger()
 
     /**
      * Allows searching on search bar and autocomplete function
@@ -30,10 +30,11 @@ window.onload = () => {
      * @param {string} giphyTrendingPath is the url to the API
      * @param {string} apiKey is the key access to the API
      */
-    // async.getTrendingGiphyArray(giphyTrendingPath, apiKey).then(
-    //     (response) => {
-    //         let trendingArray = response.data
-    //         gifs.painter(trendingArray, "trending")
-    //     }
-    // )
+    async.getTrendingGiphyArray(giphyTrendingPath, apiKey).then(
+        (response) => {
+            let trendingArray = response.data
+            console.log(trendingArray);
+            gifs.painter(trendingArray, "trending")
+        }
+    )
 }

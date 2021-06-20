@@ -32,9 +32,9 @@ export function searchBarListener(section) {
         if (event.key === 'Enter' || searchBar.value == '') {
             async.getSearchGiphyArray(giphySearchPath, apiKey, searchBar.value).then(
                 (response) => {
-                    let gifoArray = response.data
+                    let gifsArray = response.data
                     eraseAutocomplete()
-                    gifs.painter(gifoArray, section)
+                    gifs.painter(gifsArray, section)
                 }
             )
         } else {
