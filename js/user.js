@@ -17,6 +17,7 @@ export function saved(items, name, iconClass) {
             ${name}
         `)
         resultsTags.innerHTML = ''
+        console.log(gifsOnLocal);
         for (let i = 0; i < gifsOnLocal.length; i++) {
             let favorites = new constructor.Gif(i, gifsOnLocal[i], 'results')
             favorites.containerBuilder()

@@ -38,8 +38,12 @@ window.onload = () => {
     // async.getTrendingGiphyArray(giphyTrendingPath, apiKey).then(
     //     (response) => {
     //         let trendingArray = response.data
-    //         console.log(trendingArray);
-    //         gifs.painter(trendingArray, "trending")
+    //         for (let i = 0; i < trendingArray.length; i++) {
+    //             let trendings = new constructor.Gif(i, trendingArray[i], 'trending')
+    //             trendings.containerBuilder()
+    //             trendings.overlayListener()
+    //             trendings.buttons()
+    //         }
     //     }
     // )
 
@@ -55,9 +59,9 @@ window.onload = () => {
     // }
     // testgifs('favorites')
 
-    let cars = []
+    // let cars = []
 
-    let newcar = new constructor.Gif (0, getLocalData(`favorites`),  'results')
-    cars.push(newcar)
-    console.log(cars[0].containerBuilder(), cars[0].overlayListener(), cars[0].buttons());
+    // let newcar = new constructor.Gif (0, getLocalData(`favorites`),  'results')
+    // cars.push(newcar)
+    // console.log(cars[0].containerBuilder(), cars[0].overlayListener(), cars[0].buttons());
 }
