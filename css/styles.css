@@ -58,6 +58,8 @@ header .navigation .navigation__logo {
   height: 4.4rem;
   background-image: url(../svg/logo-mobile.svg);
   background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 header .navigation .navigation__logo--dark {
@@ -69,8 +71,10 @@ header .navigation .navigation__button {
   height: 1.4rem;
   background-image: url(../svg/burger.svg);
   background-size: contain;
+  background-repeat: no-repeat;
   position: absolute;
   right: 5rem;
+  cursor: pointer;
 }
 
 header .navigation .navigation__button--expanded {
@@ -285,6 +289,15 @@ header .search .search__container .search__autocomplete--dark {
   border-color: #fff;
 }
 
+header .maximized {
+  width: 100vw;
+  height: 100vh;
+  background: red;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
 @media only screen and (min-width: 375px) {
   header .search .search__container .search__icon {
     right: 7rem;
@@ -329,6 +342,7 @@ header .search .search__container .search__autocomplete--dark {
           justify-content: center;
   padding: 5rem 0;
   font-size: 1.5rem;
+  border-bottom: 5px solid #572EE5;
 }
 
 .footer--dark {
@@ -363,6 +377,7 @@ header .search .search__container .search__autocomplete--dark {
   height: 1.8rem;
   margin: 0 1rem;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .footer .social .social__icon:hover {

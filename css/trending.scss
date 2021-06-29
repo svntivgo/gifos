@@ -31,12 +31,14 @@ main {
             justify-content: space-between;
             align-items: center;
             margin-top: 5rem;
+            overflow-x: scroll;
 
             .trending__arrow {
                 display: none;
                 width: 4rem;
                 height: 4rem;
                 background-size: cover;
+                background-repeat: no-repeat;
 
                 &:hover {
                     cursor: pointer;

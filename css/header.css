@@ -22,6 +22,8 @@ header .navigation .navigation__logo {
   height: 4.4rem;
   background-image: url(../svg/logo-mobile.svg);
   background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 header .navigation .navigation__logo--dark {
@@ -33,8 +35,10 @@ header .navigation .navigation__button {
   height: 1.4rem;
   background-image: url(../svg/burger.svg);
   background-size: contain;
+  background-repeat: no-repeat;
   position: absolute;
   right: 5rem;
+  cursor: pointer;
 }
 
 header .navigation .navigation__button--expanded {
@@ -247,6 +251,15 @@ header .search .search__container .search__autocomplete .search__tag-container .
 header .search .search__container .search__autocomplete--dark {
   background-color: #37383C;
   border-color: #fff;
+}
+
+header .maximized {
+  width: 100vw;
+  height: 100vh;
+  background: red;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
 }
 
 @media only screen and (min-width: 375px) {

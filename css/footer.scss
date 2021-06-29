@@ -6,6 +6,7 @@
     justify-content: center;
     padding: 5rem 0;
     font-size: 1.5rem;
+    border-bottom: 5px solid $purpleColor;
     
     &--dark {
         background: $darkModeSoft;
@@ -31,6 +32,7 @@
             height: 1.8rem;
             margin: 0 1rem;
             background-size: cover;
+            background-repeat: no-repeat;
             &:hover{
                 cursor: pointer;
                 // background-size: cover;

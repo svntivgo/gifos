@@ -1,5 +1,5 @@
 import * as async from "./async.js";
-import * as gifs from "./gifs.js"
+import * as gifs from "./constructor.js"
 
 let apiKey = 'Ta4raQm67NO2mQWSPCHYL6O0EvldLRJO'
 let searchIcon = document.getElementById('search__icon')

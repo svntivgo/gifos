@@ -36,6 +36,7 @@ main .trending .trending__container {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 5rem;
+  overflow-x: scroll;
 }
 
 main .trending .trending__container .trending__arrow {
@@ -43,6 +44,7 @@ main .trending .trending__container .trending__arrow {
   width: 4rem;
   height: 4rem;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 main .trending .trending__container .trending__arrow:hover {
@@ -105,6 +107,7 @@ main .trending .trending__container .trending__gifo-container .trending__close {
   background-size: contain;
   background-position: bottom;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 main .trending .trending__container .trending__gifo-container .trending__close--dark {
@@ -191,6 +194,7 @@ main .trending .trending__container .trending__gifo-container .trending__overlay
   margin: 0 0.5rem;
   background-size: cover;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite {

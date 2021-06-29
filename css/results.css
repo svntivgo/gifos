@@ -14,6 +14,24 @@ main .results h2.results__title--dark {
   color: #fff;
 }
 
+main .results h2.results__title .favorites-icon {
+  width: 2.8rem;
+  height: 2.8rem;
+  margin: 0 auto;
+  background-image: url(../svg/icon-favoritos.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+main .results h2.results__title .mis-gifos-icon {
+  width: 2.8rem;
+  height: 2.8rem;
+  margin: 0 auto;
+  background-image: url(../svg/icon-mis-gifos.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 main .results h3.results__tags {
   font-size: 1.4rem;
   font-weight: normal;
@@ -77,6 +95,7 @@ main .results .results__container .results__gifo-container .results__close {
   background-size: contain;
   background-position: bottom;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 main .results .results__container .results__gifo-container .results__close--dark {
@@ -163,6 +182,7 @@ main .results .results__container .results__gifo-container .results__overlay .re
   margin: 0 0.5rem;
   background-size: cover;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 main .results .results__container .results__gifo-container .results__overlay .results__gifo-buttons-container .results__gifo-button-favorite {

@@ -18,6 +18,8 @@ header {
             height: 4.4rem;
             background-image: url(../svg/logo-mobile.svg);
             background-size: contain;
+            background-repeat: no-repeat;
+            cursor: pointer;
 
             &--dark {
                 background-image: url(../svg/logo-mobile-modo-noct.svg);
@@ -29,8 +31,10 @@ header {
             height: 1.4rem;
             background-image: url(../svg/burger.svg);
             background-size: contain;
+            background-repeat: no-repeat;
             position: absolute;
             right: 5rem;
+            cursor: pointer;
 
             &--expanded {
                 background-image: url(../svg/close.svg);
@@ -113,6 +117,7 @@ header {
         //     height: 6rem;
         //     background-image: url(../svg/button-crear-gifo.svg);
         //     background-size: cover;
+        //     background-repeat: no-repeat;
 
         //     &:hover {
         //         background-image: url(../svg/CTA-crear-gifo-hover.svg);
@@ -261,6 +266,15 @@ header {
                 }
             }
         }
+    }
+    
+    .maximized {
+        width: 100vw;
+        height: 100vh;
+        background: red;
+        position: fixed;
+        top: 0;
+        z-index: 9999;
     }
 }
 

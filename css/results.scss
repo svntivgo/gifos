@@ -13,6 +13,25 @@ main {
             &--dark {
                 color: $whiteColor
             }
+
+            .favorites-icon {
+                width: 2.8rem;
+                height: 2.8rem;
+                margin: 0 auto;
+                background-image: url(../svg/icon-favoritos.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .mis-gifos-icon {
+                width: 2.8rem;
+                height: 2.8rem;
+                margin: 0 auto;
+                background-image: url(../svg/icon-mis-gifos.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
         }
 
         h3.results__tags {
