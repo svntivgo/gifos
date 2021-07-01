@@ -53,15 +53,15 @@ window.onload = () => {
         return data
     }
 
-    // function testgifs(items) {
-    //     let gifsOnLocal = getLocalData(`${items}`)
-    //     gifs.painter(gifsOnLocal, 'trending')
-    // }
-    // testgifs('favorites')
-
-    // let cars = []
-
-    // let newcar = new constructor.Gif (0, getLocalData(`favorites`),  'results')
-    // cars.push(newcar)
-    // console.log(cars[0].containerBuilder(), cars[0].overlayListener(), cars[0].buttons());
+    function testgifs(items) {
+        let gifsOnLocal = getLocalData(`favorites`)
+        for (let i = 0; i < gifsOnLocal.length; i++) {
+            let trendings = new constructor.Gif(i, gifsOnLocal, `${items}`)
+            trendings.containerBuilder()
+            trendings.overlayListener()
+            trendings.buttons()
+        }
+    }
+    testgifs('trending')
+    testgifs('results')
 }
