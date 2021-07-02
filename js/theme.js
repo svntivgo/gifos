@@ -12,6 +12,7 @@ let elementIdDarkMode = [
     'search__bar',
     'search__autocomplete',
     'search__icon',
+    'max__gifo-container',
     'results',
     'results__title',
     'results__tags',

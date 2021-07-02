@@ -1,4 +1,5 @@
 main .trending {
+  padding: 6rem 2rem;
   background-color: #F3F5F8;
   text-align: center;
 }
@@ -68,34 +69,6 @@ main .trending .trending__container .trending__arrow-right:hover {
   background-image: url(../svg/button-slider-right-hover.svg);
 }
 
-main .trending .trending__container .trending__gifo-container {
-  width: 15vw;
-  min-width: 20rem;
-  height: 15vw;
-  min-height: 20rem;
-  margin: 0.7rem 0.7rem;
-}
-
-main .trending .trending__container .trending__gifo-container--max {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 100vh;
-  padding: 6rem 0;
-  background-color: #fff;
-  position: fixed;
-  top: 0;
-  z-index: 9999;
-}
-
 main .trending .trending__container .trending__gifo-container .trending__close {
   display: none;
   width: 2rem;
@@ -103,6 +76,7 @@ main .trending .trending__container .trending__gifo-container .trending__close {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-right: 10vw;
+  margin-bottom: 3rem;
   background-image: url("../svg/close.svg");
   background-size: contain;
   background-position: bottom;
@@ -114,61 +88,37 @@ main .trending .trending__container .trending__gifo-container .trending__close--
   background-image: url("../svg/close-modo-noct.svg");
 }
 
-main .trending .trending__container .trending__gifo-container .trending__close--max {
-  display: block;
-}
-
-main .trending .trending__container .trending__gifo-container .trending__img {
-  width: 15vw;
-  min-width: 20rem;
-  height: 15vw;
-  min-height: 20rem;
-}
-
-main .trending .trending__container .trending__gifo-container .trending__img--max {
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container {
   width: 80vw;
+  max-width: 20rem;
   height: 80vw;
-  max-width: 50vh;
-  max-height: 50vh;
-  margin-top: 6rem;
+  max-height: 20rem;
+  margin: 0.7rem 0.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-main .trending .trending__container .trending__gifo-container .trending__overlay {
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__img {
+  width: 100%;
+  height: 100%;
+}
+
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
-  height: 15vw;
-  min-height: 20rem;
-  background-color: rgba(87, 46, 229, 0.7);
-  position: relative;
-  bottom: 20.3rem;
-}
-
-main .trending .trending__container .trending__gifo-container .trending__overlay--max {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-flow: row-reverse nowrap;
-          flex-flow: row-reverse nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 80vw;
-  max-width: 50vh;
-  height: 7rem;
-  min-height: 7rem;
-  min-width: unset;
-  position: unset;
-  bottom: unset;
-  background-color: unset;
+  max-width: 20rem;
+  height: 80vw;
+  max-height: 20rem;
+  background-color: rgba(87, 46, 229, 0.7);
+  position: absolute;
 }
 
-main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container {
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -180,15 +130,7 @@ main .trending .trending__container .trending__gifo-container .trending__overlay
   padding-right: 0.5rem;
 }
 
-main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container--max {
-  width: unset;
-  -webkit-box-pack: unset;
-      -ms-flex-pack: unset;
-          justify-content: unset;
-  padding: 0;
-}
-
-main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button {
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button {
   width: 3.2rem;
   height: 3.2rem;
   margin: 0 0.5rem;
@@ -197,20 +139,15 @@ main .trending .trending__container .trending__gifo-container .trending__overlay
   cursor: pointer;
 }
 
-main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite {
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite {
   background: url(../svg/icon-fav.svg);
 }
 
-main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite--max {
-  margin: 0;
-  margin-left: 1rem;
-}
-
-main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite:hover {
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite:hover {
   background: url(../svg/icon-fav-hover.svg);
 }
 
-main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite:active {
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite:active {
   max-width: 3.2rem;
   max-height: 3.2rem;
   background: url(../svg/icon-fav-active.svg);
@@ -218,33 +155,23 @@ main .trending .trending__container .trending__gifo-container .trending__overlay
   background-position: center;
 }
 
-main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-download {
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-download {
   background: url(../svg/icon-download.svg);
 }
 
-main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-download--max {
-  margin: 0;
-  margin-left: 1rem;
-}
-
-main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-download:hover {
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-download:hover {
   background: url(../svg/icon-download-hover.svg);
 }
 
-main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-maximize {
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-maximize {
   background: url(../svg/icon-max-normal.svg);
 }
 
-main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-maximize--max {
-  margin: 0;
-  margin-left: 1rem;
-}
-
-main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-maximize:hover {
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-maximize:hover {
   background: url(../svg/icon-max-hover.svg);
 }
 
-main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-text-container {
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-text-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -252,31 +179,23 @@ main .trending .trending__container .trending__gifo-container .trending__overlay
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 8rem 2rem 2rem 2rem;
-  text-align: start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 2rem;
+  text-align: left;
 }
 
-main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-text-container--max {
-  height: 7rem;
-  padding: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-text-container p {
+  color: #fff;
 }
 
-main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-text-container p {
-  color: #000;
-}
-
-main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-text-container p--max {
-  color: #000;
-}
-
-main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-text-container p.trending__gifo-owner {
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-text-container p.trending__gifo-owner {
   font-size: 1.5rem;
+  margin-top: 3rem;
 }
 
-main .trending .trending__container .trending__gifo-container .trending__overlay .trending__gifo-text-container p.trending__gifo-title {
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-text-container p.trending__gifo-title {
   font-size: 1.6rem;
   font-weight: 700;
 }

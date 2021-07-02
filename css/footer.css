@@ -8,12 +8,13 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 5rem 0;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   border-bottom: 5px solid #572EE5;
 }
 
 .footer--dark {
   background: #37383C;
+  border-color: #000;
 }
 
 .footer .social {
@@ -95,6 +96,7 @@
 .footer .copyrights {
   width: 95vw;
   text-align: center;
+  margin-top: 5rem;
 }
 
 .footer .copyrights--dark {
