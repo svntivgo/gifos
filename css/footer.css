@@ -12,11 +12,6 @@
   border-bottom: 5px solid #572EE5;
 }
 
-.footer--dark {
-  background: #37383C;
-  border-color: #000;
-}
-
 .footer .social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,10 +29,6 @@
   width: 100vw;
   text-align: center;
   margin-bottom: 2.5rem;
-}
-
-.footer .social .social__text--dark {
-  color: #fff;
 }
 
 .footer .social .social__icon {
@@ -65,10 +56,6 @@
   background-image: url(../svg/icon_facebook_hover.svg);
 }
 
-.footer .social .social__icon-facebook--dark {
-  background-image: url(../svg/icon_facebook_noc.svg);
-}
-
 .footer .social .social__icon-twitter {
   background-image: url(../svg/icon-twitter.svg);
 }
@@ -77,20 +64,12 @@
   background-image: url(../svg/icon-twitter-hover.svg);
 }
 
-.footer .social .social__icon-twitter--dark {
-  background-image: url(../svg/icon_twitter_noc.svg);
-}
-
 .footer .social .social__icon-instagram {
   background-image: url(../svg/icon_instagram.svg);
 }
 
 .footer .social .social__icon-instagram:hover {
   background-image: url(../svg/icon_instagram-hover.svg);
-}
-
-.footer .social .social__icon-instagram--dark {
-  background-image: url(../svg/icon_instagram_noc.svg);
 }
 
 .footer .copyrights {

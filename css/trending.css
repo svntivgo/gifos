@@ -10,18 +10,10 @@ main .trending h2.trending__title {
   line-height: 3rem;
 }
 
-main .trending h2.trending__title--dark {
-  color: #fff;
-}
-
 main .trending .trending__text {
   padding: 0 20vw;
   font-size: 1.6rem;
   line-height: 2.3rem;
-}
-
-main .trending .trending__text--dark {
-  color: #fff;
 }
 
 main .trending .trending__container {
@@ -69,6 +61,10 @@ main .trending .trending__container .trending__arrow-right:hover {
   background-image: url(../svg/button-slider-right-hover.svg);
 }
 
+main .trending .trending__container .trending__gifo-container {
+  margin: 1rem;
+}
+
 main .trending .trending__container .trending__gifo-container .trending__close {
   display: none;
   width: 2rem;
@@ -84,16 +80,11 @@ main .trending .trending__container .trending__gifo-container .trending__close {
   cursor: pointer;
 }
 
-main .trending .trending__container .trending__gifo-container .trending__close--dark {
-  background-image: url("../svg/close-modo-noct.svg");
-}
-
 main .trending .trending__container .trending__gifo-container .trending__img-overlay-container {
   width: 80vw;
   max-width: 20rem;
   height: 80vw;
   max-height: 20rem;
-  margin: 0.7rem 0.7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,9 +96,7 @@ main .trending .trending__container .trending__gifo-container .trending__img-ove
 }
 
 main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 80vw;
@@ -192,15 +181,10 @@ main .trending .trending__container .trending__gifo-container .trending__img-ove
 
 main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-text-container p.trending__gifo-owner {
   font-size: 1.5rem;
-  margin-top: 3rem;
 }
 
 main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-text-container p.trending__gifo-title {
   font-size: 1.6rem;
   font-weight: 700;
-}
-
-main .trending--dark {
-  background: #222326;
 }
 /*# sourceMappingURL=trending.css.map */

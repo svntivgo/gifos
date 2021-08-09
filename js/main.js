@@ -1,34 +1,47 @@
-import * as async from "./async.js";
+import {
+    theme
+} from "./modules/theme/theme.js";
 
-import * as searchBar from "./search-bar.js";
+import {
+    menu
+} from "./modules/menu/menu.js";
 
-import * as constructor from "./constructor.js";
+import {
+    button
+} from "./modules/logo/logo.js";
 
-import * as theme from "./theme.js";
+import {
+    getSearchGiphyArray,
+    getTrendingGiphyArray,
+    getGiphyAutocomplete
+} from "./modules/getters/getters.js";
 
-import * as button from "./button.js";
+import {
+    searchBar
+} from "./modules/searchbar/searchbar.js";
+
+import {
+    Gifo
+} from "./modules/constructor/constructor.js";
 
 import * as user from "./user.js"
 
+import { favs } from "./favorites.js";
+
 window.onload = () => {
-    let apiKey = 'Ta4raQm67NO2mQWSPCHYL6O0EvldLRJO'
-    let giphyTrendingPath = 'https://api.giphy.com/v1/gifs/trending'
+    let favorites = localStorage.getItem("favorites") ? JSON.parse(localStorage.getItem('favorites')) : favs
 
+    let resultsGifs = []
+    let trendingGifs = []
 
-    theme.switcher()
-    theme.buttonChanger()
-    button.logo()
-    button.burger()
-    user.saved('favorites', 'Favoritos', 'favorites')
-    user.saved('user-gifos', 'Mis gifos', 'mis-gifos')
+    theme()
+    menu()
+    button()
+    searchBar(getSearchGiphyArray, getGiphyAutocomplete, 0, Gifo)
 
-    /**
-     * Allows searching on search bar and autocomplete function
-     * On click or Enter key, draw gifs on screen
-     * @event
-     * @module from search.js
-     */
-    searchBar.searchBarListener("results")
+    // user.saved('favorites', 'Favoritos', 'favorites')
+    // user.saved('user-gifos', 'Mis gifos', 'mis-gifos')
+
 
     /**
      * Draws gifs on trending section
@@ -47,21 +60,29 @@ window.onload = () => {
     //     }
     // )
 
-    
-    function getLocalData(item) {
-        let data = JSON.parse(localStorage.getItem(item))
-        return data
-    }
+    function testgifs(section, arrayPush) {
 
-    function testgifs(items) {
-        let gifsOnLocal = getLocalData(`favorites`)
+        let gifsOnLocal = favorites
+        let id = document.getElementById(`${section}__container`).childElementCount
+
         for (let i = 0; i < gifsOnLocal.length; i++) {
-            let trendings = new constructor.Gif(i, gifsOnLocal, `${items}`)
-            trendings.containerBuilder()
-            trendings.overlayListener()
-            trendings.buttons()
+            arrayPush.push(gifsOnLocal[i])
+            let trendings = new Gifo(i, `${section}`, id, arrayPush)
+            trendings.gifoBuilder(gifsOnLocal)
+            id ++
         }
     }
-    testgifs('trending')
-    testgifs('results')
+
+function vermas() {
+    let boton = document.getElementById("results__title")
+    boton.addEventListener('click', () => {
+        console.log("object");
+        testgifs('results', resultsGifs)
+    })
+}
+vermas()
+
+
+    testgifs('trending', trendingGifs)
+    testgifs('results', resultsGifs)
 }

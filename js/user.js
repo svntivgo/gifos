@@ -1,4 +1,4 @@
-import * as constructor from "./constructor.js";
+import * as constructor from "./modules/constructor/constructor.js";
 
 export function saved(items, name, iconClass) {
     let favoritesBtn = document.getElementById(`navigation__${items}`)
