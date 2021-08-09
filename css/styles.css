@@ -337,6 +337,14 @@ header .max__gifo-container .max__img-overlay-container .max__overlay .max__gifo
   background-repeat: no-repeat;
 }
 
+header .max__gifo-container .max__img-overlay-container .max__overlay .max__gifo-buttons-container .max__gifo-button-favorite-saved {
+  max-width: 3.2rem;
+  max-height: 3.2rem;
+  background: url(../svg/icon-fav-active.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 header .max__gifo-container .max__img-overlay-container .max__overlay .max__gifo-buttons-container .max__gifo-button-download {
   background: url(../svg/icon-download.svg);
 }
