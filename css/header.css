@@ -59,7 +59,7 @@ header .navigation nav .navigation__menu {
   top: 10rem;
   left: 100vw;
   z-index: 999;
-  background-color: #572EE5;
+  background-color: #572EE5dd;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }

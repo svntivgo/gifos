@@ -426,6 +426,9 @@ header .max__gifo-container--maximized .max__img-overlay-container {
 }
 
 header .max__gifo-container--maximized .max__img-overlay-container .max__overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-flow: row-reverse nowrap;
