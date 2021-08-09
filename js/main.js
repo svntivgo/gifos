@@ -39,7 +39,7 @@ window.onload = () => {
     button()
     searchBar(getSearchGiphyArray, getGiphyAutocomplete, 0, Gifo)
 
-    // user.saved('favorites', 'Favoritos', 'favorites')
+    user.saved('favorites', 'Favoritos', 'favorites')
     // user.saved('user-gifos', 'Mis gifos', 'mis-gifos')
 
 
