@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="./css/results.css">
     <link rel="stylesheet" href="./css/trending.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/theme.css">
     <script type="module" src="./js/main.js"></script>
     <title>Gifos</title>
 </head>
 
-<body>
+<body id="body">
     <header>
         <section class="navigation" id="navigation">
             <div class="navigation__logo" id="navigation__logo"></div>
@@ -44,21 +45,9 @@
                 </div>
             </div>
         </section>
-        <!-- <div class="gif-max">
-            <div class="close"></div>
-            <img src="https://via.placeholder.com/150" alt="">
-            <div class="gif-max__overlay">
-                <div class="gif-max__gifo-buttons-container">
-                    <div class="gif-max__gifo-button gif-max__gifo-button-favorite" id="favbtn${i}"></div>
-                    <div class="gif-max__gifo-button gif-max__gifo-button-download"></div>
-                    <div class="gif-max__gifo-button gif-max__gifo-button-maximize"></div>
-                </div>
-                <div class="gif-max__gifo-text-container">
-                    <p class="gif-max__gifo-owner">${owner}</p>
-                    <p class="gif-max__gifo-title">${title}</p>
-                </div>
-            </div>
-        </div> -->
+        <section class="max__gifo-container" id="max__gifo-container">
+
+        </section>
     </header>
     <main>
         <section class="results" id="results">
@@ -73,24 +62,22 @@
             <p class="trending__text" id="trending__text">Mira los últimos GIFO de nuestra comunidad.</p>
             <div class="trending__container" id="trending__container">
                 <!-- <div class="trending__arrow-left" id="trending__arrow-left"></div>
-                    
+
                     All trending gifos will be here
 
                 <div class="trending__arrow-right" id="trending__arrow-right"></div> -->
             </div>
         </section>
     </main>
+    <footer class="footer" id="footer">
+        <section class="social" id="social">
+            <p class="social__text" id="social__text">Compartir en:</p>
+            <div class="social__icon social__icon-facebook" id="social__icon-facebook"><a href="#" target="_blank" rel="noopener noreferrer"></a></div>
+            <div class="social__icon social__icon-twitter" id="social__icon-twitter"><a href="#" target="_blank" rel="noopener noreferrer"></a></div>
+            <div class="social__icon social__icon-instagram" id="social__icon-instagram"><a href="#" target="_blank" rel="noopener noreferrer"></a>
+            </div>
+        </section>
+        <p class="copyrights" id="copyrights">© GIFOS 2021 All Rights Reserved.</p>
+    </footer>
 </body>
-
-<footer class="footer" id="footer">
-    <section class="social" id="social">
-        <p class="social__text" id="social__text">Compartir en:</p>
-        <div class="social__icon social__icon-facebook" id="social__icon-facebook"><a href="#" target="_blank" rel="noopener noreferrer"></a></div>
-        <div class="social__icon social__icon-twitter" id="social__icon-twitter"><a href="#" target="_blank" rel="noopener noreferrer"></a></div>
-        <div class="social__icon social__icon-instagram" id="social__icon-instagram"><a href="#" target="_blank" rel="noopener noreferrer"></a>
-        </div>
-    </section>
-    <p class="copyrights" id="copyrights">© GIFOS 2021 All Rights Reserved.</p>
-</footer>
-
 </html>
