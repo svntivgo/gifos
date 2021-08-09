@@ -95,7 +95,7 @@ header .navigation nav .navigation__menu {
   top: 10rem;
   left: 100vw;
   z-index: 999;
-  background-color: #572EE5;
+  background-color: #572EE5dd;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
@@ -333,8 +333,8 @@ header .max__gifo-container .max__img-overlay-container .max__overlay .max__gifo
   max-width: 3.2rem;
   max-height: 3.2rem;
   background: url(../svg/icon-fav-active.svg);
-  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 header .max__gifo-container .max__img-overlay-container .max__overlay .max__gifo-buttons-container .max__gifo-button-download {

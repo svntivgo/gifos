@@ -126,8 +126,8 @@ main .results .results__container .results__gifo-container .results__img-overlay
   max-width: 3.2rem;
   max-height: 3.2rem;
   background: url(../svg/icon-fav-active.svg);
-  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 main .results .results__container .results__gifo-container .results__img-overlay-container .results__overlay .results__gifo-buttons-container .results__gifo-button-download {

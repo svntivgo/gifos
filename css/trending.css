@@ -140,8 +140,8 @@ main .trending .trending__container .trending__gifo-container .trending__img-ove
   max-width: 3.2rem;
   max-height: 3.2rem;
   background: url(../svg/icon-fav-active.svg);
-  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-download {
