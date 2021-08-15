@@ -1,7 +1,6 @@
 export let maximize = (section, index, imgUrl, gifId, owner, title, id, arrayPush, favorites) => {
     let overlay = document.getElementsByClassName(`${section}__overlay`)
     let favorite = favorites.find((fav) => fav.id === arrayPush[id].id)
-    let favoriteBtn = document.getElementById(`max__gifo-button-favorite`)
     overlay[id].addEventListener('click', () => {
         let maxContainer = document.getElementById('max__gifo-container')
         maxContainer.classList.toggle('max__gifo-container--maximized')
@@ -26,8 +25,12 @@ export let maximize = (section, index, imgUrl, gifId, owner, title, id, arrayPus
         </div>
         `)
 
-        if (favorite.id === arrayPush[id].id) {
+        let favoriteBtn = document.getElementById(`max__gifo-button-favorite`)
+
+        if (favorite) {
+
             favoriteBtn.classList.add('max__gifo-button-favorite-saved')
+
         }
 
         document.getElementById(`max__close`).addEventListener('click', () => {
@@ -51,7 +54,7 @@ export let maximize = (section, index, imgUrl, gifId, owner, title, id, arrayPus
                 id++
 
                 favorite = favorites.find((fav) => fav.id === arrayPush[id].id)
-                console.log(favorite);
+
 
                 let image = document.getElementById(`max__img`)
                 let texts = document.getElementById('max__gifo-text-container')
@@ -59,7 +62,7 @@ export let maximize = (section, index, imgUrl, gifId, owner, title, id, arrayPus
                 texts.firstElementChild.innerHTML = (`${arrayPush[id].username}`)
                 texts.lastElementChild.innerHTML = (`${arrayPush[id].title}`)
 
-                if (favorite.id === arrayPush[id].id) {
+                if (favorite) {
                     favoriteBtn.classList.add('max__gifo-button-favorite-saved')
                 } else {
                     favoriteBtn.classList.remove('max__gifo-button-favorite-saved')

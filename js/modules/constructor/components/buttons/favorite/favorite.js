@@ -1,9 +1,9 @@
 export let favorite = (section, id, favorites, arrayPush) => {
 
-    let favorite = favorites.find((fav) => fav.id === arrayPush[id].id)
+    let favorite = favorites.find(fav => fav.id === arrayPush[id].id)
     let favoriteBtn = document.getElementById(`${section}__gifo-button-favorite-${id}`)
 
-    if (favorite.id === arrayPush[id].id) {
+    if (favorite) {
         favoriteBtn.classList.add(`${section}__gifo-button-favorite-saved`)
     }
 
