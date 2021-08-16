@@ -53,56 +53,56 @@ body.--dark-mode .max__gifo-container .max__close {
   background-image: url("../svg/close-modo-noct.svg");
 }
 
-body main .results {
+body.--dark-mode main .results {
   background: #37383C;
 }
 
-body main .results h2.results__title {
+body.--dark-mode main .results h2.results__title {
   color: #fff;
 }
 
-body main .results h3.results__tags {
+body.--dark-mode main .results h3.results__tags {
   color: #fff;
 }
 
-body main .trending {
+body.--dark-mode main .trending {
   background: #222326;
 }
 
-body main .trending h2.trending__title {
+body.--dark-mode main .trending h2.trending__title {
   color: #fff;
 }
 
-body main .trending .trending__text {
+body.--dark-mode main .trending .trending__text {
   color: #fff;
 }
 
-body main .trending .trending__container .trending__gifo-container .trending__close {
+body.--dark-mode main .trending .trending__container .trending__gifo-container .trending__close {
   background-image: url("../svg/close-modo-noct.svg");
 }
 
-body footer {
+body.--dark-mode footer {
   background: #37383C;
   border-color: #000;
 }
 
-body footer .social .social__text {
+body.--dark-mode footer .social .social__text {
   color: #fff;
 }
 
-body footer .social .social__icon-facebook {
+body.--dark-mode footer .social .social__icon-facebook {
   background-image: url(../svg/icon_facebook_noc.svg);
 }
 
-body footer .social .social__icon-twitter {
+body.--dark-mode footer .social .social__icon-twitter {
   background-image: url(../svg/icon_twitter_noc.svg);
 }
 
-body footer .social .social__icon-instagram {
+body.--dark-mode footer .social .social__icon-instagram {
   background-image: url(../svg/icon_instagram_noc.svg);
 }
 
-body footer .copyrights {
+body.--dark-mode footer .copyrights {
   color: #fff;
 }
 
