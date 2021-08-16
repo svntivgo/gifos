@@ -70,7 +70,7 @@ window.onload = () => {
     menu()
     button()
     searchBar(getSearchGiphyArray, getGiphyAutocomplete, 0, Gifo)
-    trendingTerms(terms, 5)
+    trendingTerms(terms)
 
     user.saved('favorites', 'Favoritos', 'favorites')
     // user.saved('user-gifos', 'Mis gifos', 'mis-gifos')

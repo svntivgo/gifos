@@ -483,6 +483,12 @@ header .max__gifo-container--maximized .max__img-overlay-container .max__overlay
           justify-content: center;
 }
 
+@media only screen and (min-width: 1025px) {
+  header {
+    background-color: aqua;
+  }
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;

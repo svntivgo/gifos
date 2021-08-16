@@ -1,4 +1,4 @@
-export function trendingTerms(array, number) {
+export function trendingTerms(array) {
 
     let container = document.getElementById('results__tags')
     let terms = array.data
