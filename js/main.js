@@ -24,6 +24,8 @@ import {
     Gifo
 } from "./modules/constructor/constructor.js";
 
+import { trendingTerms } from "./modules/trend-terms/trend-terms.js";
+
 import * as user from "./user.js"
 
 import { favs } from "./favorites.js";
@@ -34,7 +36,7 @@ window.onload = () => {
     let resultsGifs = []
     let trendingGifs = []
     let testTrendingGifs = JSON.parse(localStorage.getItem('trending'))
-    let trendingTerms = {
+    let terms = {
         "data": [
             "relaxing",
             "thinking",
@@ -64,12 +66,11 @@ window.onload = () => {
         }
     }
 
-    console.log(trendingTerms.data);
-
     theme()
     menu()
     button()
     searchBar(getSearchGiphyArray, getGiphyAutocomplete, 0, Gifo)
+    trendingTerms(terms, 5)
 
     user.saved('favorites', 'Favoritos', 'favorites')
     // user.saved('user-gifos', 'Mis gifos', 'mis-gifos')
