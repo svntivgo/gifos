@@ -72,6 +72,30 @@ export let maximize = (section, index, imgUrl, gifId, owner, title, id, arrayPus
                 return id
             }
         })
+
+        document.getElementById(`max__prev`).addEventListener('click', () => {
+            if (id > 0) {
+
+                id--
+
+                favorite = favorites.find((fav) => fav.id === arrayPush[id].id)
+
+
+                let image = document.getElementById(`max__img`)
+                let texts = document.getElementById('max__gifo-text-container')
+                image.src = (`${arrayPush[id].images.preview_webp.url}`)
+                texts.firstElementChild.innerHTML = (`${arrayPush[id].username}`)
+                texts.lastElementChild.innerHTML = (`${arrayPush[id].title}`)
+
+                if (favorite) {
+                    favoriteBtn.classList.add('max__gifo-button-favorite-saved')
+                } else {
+                    favoriteBtn.classList.remove('max__gifo-button-favorite-saved')
+                }
+
+                return id
+            }
+        })
     })
     overlay[id].style.display = "none"
 }
