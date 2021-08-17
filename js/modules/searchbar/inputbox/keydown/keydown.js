@@ -1,6 +1,7 @@
 export let keydown = (inputBox, getterSearch, limit, cleaner, constructor, searchIcon, autocomplete, autocompleteBox, resultsSection) => {
-    let theme = localStorage.getItem('theme')
     inputBox.addEventListener('keydown', (event) => {
+        let theme = localStorage.getItem('theme')
+
         if (event.key === 'Enter') {
             getterSearch(inputBox.value, limit).then(
                 (response) => {
@@ -11,18 +12,18 @@ export let keydown = (inputBox, getterSearch, limit, cleaner, constructor, searc
                         onClick.gifoBuilder(gifsArray)
                     }
                     if (theme === 'Modo Diurno') {
-                        inputBox.style.borderBottom = "1px solid #572EE5"
+                        inputBox.style.border = "1px solid #572EE5"
                     } else if (theme === 'Modo Nocturno') {
-                        inputBox.style.borderBottom = "1px solid #FFFFFF"
+                        inputBox.style.border = "1px solid #FFFFFF"
                     }
                 }
             )
         } else if (inputBox.value == '') {
             cleaner(autocompleteBox, inputBox, searchIcon, resultsSection)
             if (theme === 'Modo Diurno') {
-                inputBox.style.borderBottom = "1px solid #572EE5"
+                inputBox.style.border = "1px solid #572EE5"
             } else if (theme === 'Modo Nocturno') {
-                inputBox.style.borderBottom = "1px solid #FFFFFF"
+                inputBox.style.border = "1px solid #FFFFFF"
             }
         } else {
             autocomplete(autocompleteBox)
