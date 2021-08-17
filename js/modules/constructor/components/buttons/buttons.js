@@ -9,7 +9,7 @@ import {
 } from "./download/download.js"
 
 export let buttons = (section, index, imgUrl, gifId, owner, title, id, arrayPush, favorites) => {
-    maximize(section, index, imgUrl, gifId, owner, title, id, arrayPush)
-    // favorite(section, index, favorites)
+    maximize(section, index, imgUrl, gifId, owner, title, id, arrayPush, favorites)
+    favorite(section, id, favorites, arrayPush)
     // download(section, index, gifId)
 }

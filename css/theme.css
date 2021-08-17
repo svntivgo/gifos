@@ -23,33 +23,33 @@ body.--dark-mode header .navigation nav .navigation__menu a {
   color: #fff;
 }
 
-body.--dark-mode header .search {
+body.--dark-mode .search {
   background-color: #37383C;
 }
 
-body.--dark-mode header .search h1.search__title {
+body.--dark-mode .search h1.search__title {
   color: #fff;
 }
 
-body.--dark-mode header .search .search__container .search__bar {
+body.--dark-mode .search .search__container .search__bar {
   color: #fff;
   border-color: #fff;
 }
 
-body.--dark-mode header .search .search__container .search__icon {
+body.--dark-mode .search .search__container .search__icon {
   background-image: url(../svg/icon-search-mod-noc.svg);
 }
 
-body.--dark-mode header .search .search__container .search__autocomplete {
+body.--dark-mode .search .search__container .search__autocomplete {
   background-color: #37383C;
   border-color: #fff;
 }
 
-body.--dark-mode header .max__gifo-container {
+body.--dark-mode .max__gifo-container {
   background-color: #37383C;
 }
 
-body.--dark-mode header .max__gifo-container .max__close {
+body.--dark-mode .max__gifo-container .max__close {
   background-image: url("../svg/close-modo-noct.svg");
 }
 
@@ -104,5 +104,25 @@ body.--dark-mode footer .social .social__icon-instagram {
 
 body.--dark-mode footer .copyrights {
   color: #fff;
+}
+
+@media only screen and (min-width: 1024px) {
+  body.--dark-mode header .navigation .navigation__logo {
+    width: 6.34rem;
+    height: 6rem;
+    background: url(../svg/Logo-modo-noc.svg);
+  }
+  body.--dark-mode header .navigation nav .navigation__menu {
+    background: unset;
+  }
+  body.--dark-mode header .navigation .navigation__new-button {
+    background-image: url(../svg/CTA-crear-gifo-modo-noc.svg);
+  }
+  body.--dark-mode header .navigation .navigation__new-button:hover {
+    background-image: url(../svg/CTA-crear-gifo-hover-modo-noc.svg);
+  }
+  body.--dark-mode header .navigation .navigation__new-button:active {
+    background-image: url(../svg/CTA-crear-gifo-active-modo-noc.svg);
+  }
 }
 /*# sourceMappingURL=theme.css.map */

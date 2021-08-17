@@ -82,7 +82,7 @@ main .trending .trending__container .trending__gifo-container .trending__close {
 
 main .trending .trending__container .trending__gifo-container .trending__img-overlay-container {
   width: 80vw;
-  max-width: 20rem;
+  max-width: 26rem;
   height: 80vw;
   max-height: 20rem;
   display: -webkit-box;
@@ -100,7 +100,7 @@ main .trending .trending__container .trending__gifo-container .trending__img-ove
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 80vw;
-  max-width: 20rem;
+  max-width: 26rem;
   height: 80vw;
   max-height: 20rem;
   background-color: rgba(87, 46, 229, 0.7);
@@ -140,8 +140,16 @@ main .trending .trending__container .trending__gifo-container .trending__img-ove
   max-width: 3.2rem;
   max-height: 3.2rem;
   background: url(../svg/icon-fav-active.svg);
-  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+}
+
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite-saved {
+  max-width: 3.2rem;
+  max-height: 3.2rem;
+  background: url(../svg/icon-fav-active.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-download {

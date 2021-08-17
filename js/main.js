@@ -24,6 +24,8 @@ import {
     Gifo
 } from "./modules/constructor/constructor.js";
 
+import { trendingTerms } from "./modules/trend-terms/trend-terms.js";
+
 import * as user from "./user.js"
 
 import { favs } from "./favorites.js";
@@ -33,13 +35,44 @@ window.onload = () => {
 
     let resultsGifs = []
     let trendingGifs = []
+    let testTrendingGifs = JSON.parse(localStorage.getItem('trending'))
+    let terms = {
+        "data": [
+            "relaxing",
+            "thinking",
+            "begin",
+            "divine",
+            "funny dog",
+            "frozen elsa",
+            "face palm",
+            "champagne",
+            "sad face",
+            "comedy",
+            "super saiyan 3",
+            "beer",
+            "cant read",
+            "airplane",
+            "sharon stone",
+            "chile",
+            "Hotdog",
+            "dog",
+            "flirting",
+            "hugging"
+        ],
+        "meta": {
+            "status": 200,
+            "msg": "OK",
+            "response_id": "1aea4e97aedf84e64c1a4df0f3ec1f245d2dd0ed"
+        }
+    }
 
     theme()
     menu()
     button()
     searchBar(getSearchGiphyArray, getGiphyAutocomplete, 0, Gifo)
+    trendingTerms(terms)
 
-    // user.saved('favorites', 'Favoritos', 'favorites')
+    user.saved('favorites', 'Favoritos', 'favorites')
     // user.saved('user-gifos', 'Mis gifos', 'mis-gifos')
 
 
@@ -48,27 +81,24 @@ window.onload = () => {
      * @param {string} giphyTrendingPath is the url to the API
      * @param {string} apiKey is the key access to the API
      */
-    // async.getTrendingGiphyArray(giphyTrendingPath, apiKey).then(
+    // getTrendingGiphyArray(3).then(
     //     (response) => {
+
     //         let trendingArray = response.data
-    //         for (let i = 0; i < trendingArray.length; i++) {
-    //             let trendings = new constructor.Gif(i, trendingArray[i], 'trending')
-    //             trendings.containerBuilder()
-    //             trendings.overlayListener()
-    //             trendings.buttons()
-    //         }
+    //         console.log(trendingArray);
+    //         testgifs('trending', trendingGifs, trendingArray)
+
     //     }
     // )
 
-    function testgifs(section, arrayPush) {
+    function testgifs(section, arrayPush, array, favo) {
 
-        let gifsOnLocal = favorites
         let id = document.getElementById(`${section}__container`).childElementCount
 
-        for (let i = 0; i < gifsOnLocal.length; i++) {
-            arrayPush.push(gifsOnLocal[i])
+        for (let i = 0; i < array.length; i++) {
+            arrayPush.push(array[i])
             let trendings = new Gifo(i, `${section}`, id, arrayPush)
-            trendings.gifoBuilder(gifsOnLocal)
+            trendings.gifoBuilder(favo)
             id ++
         }
     }
@@ -82,7 +112,6 @@ function vermas() {
 }
 vermas()
 
-
-    testgifs('trending', trendingGifs)
-    testgifs('results', resultsGifs)
+    testgifs('results', trendingGifs, testTrendingGifs, favorites)
+    testgifs('trending', trendingGifs, testTrendingGifs, favorites)
 }
