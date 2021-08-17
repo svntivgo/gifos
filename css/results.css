@@ -78,7 +78,8 @@ main .results .results__container .results__gifo-container .results__img-overlay
 
 main .results .results__container .results__gifo-container .results__img-overlay-container .results__img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 50vh;
 }
 
 main .results .results__container .results__gifo-container .results__img-overlay-container .results__overlay {
