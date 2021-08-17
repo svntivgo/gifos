@@ -29,7 +29,9 @@ export let keydown = (inputBox, getterSearch, limit, cleaner, constructor, searc
             // .then(
             //     (response) => {
                     inputBox.style.borderRadius = "27px 27px 0 0"
-                    searchIcon.style.right = "87%"
+                    searchIcon.style.marginRight = "auto"
+                    searchIcon.style.marginLeft = "2rem"
+
                 //     let autocompleteArray = response.data
                 //     autocomplete(autocompleteArray)
                 // }

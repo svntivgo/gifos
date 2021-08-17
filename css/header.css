@@ -173,18 +173,16 @@ header .search .search__container .search__bar:focus {
 header .search .search__container .search__icon {
   width: 2rem;
   height: 2rem;
-  margin-left: -2rem;
-  position: relative;
-  right: 2rem;
-  top: 1.5rem;
+  margin-left: auto;
+  margin-right: 2rem;
+  margin-top: -3.5rem;
   background-image: url(../svg/icon-search.svg);
   background-size: cover;
   cursor: pointer;
 }
 
 header .search .search__container .search__autocomplete {
-  width: 80vw;
-  max-width: 50rem;
+  width: 100%;
   padding: 0 3rem;
   display: none;
   position: relative;
