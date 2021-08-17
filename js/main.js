@@ -73,6 +73,7 @@ window.onload = () => {
     trendingTerms(terms)
 
     user.saved('favorites', 'Favoritos', 'favorites')
+    user.created([], 'Mis GIFOS', 'user-gifos')
     // user.saved('user-gifos', 'Mis gifos', 'mis-gifos')
 
 

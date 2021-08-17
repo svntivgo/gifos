@@ -173,18 +173,16 @@ header .search .search__container .search__bar:focus {
 header .search .search__container .search__icon {
   width: 2rem;
   height: 2rem;
-  margin-left: -2rem;
-  position: relative;
-  right: 2rem;
-  top: 1.5rem;
+  margin-left: auto;
+  margin-right: 2rem;
+  margin-top: -3.5rem;
   background-image: url(../svg/icon-search.svg);
   background-size: cover;
   cursor: pointer;
 }
 
 header .search .search__container .search__autocomplete {
-  width: 80vw;
-  max-width: 50rem;
+  width: 100%;
   padding: 0 3rem;
   display: none;
   position: relative;
@@ -382,7 +380,7 @@ header .max__gifo-container--maximized {
           justify-content: center;
 }
 
-header .max__gifo-container--maximized .max__next {
+header .max__gifo-container--maximized .max__slide-btn {
   display: none;
 }
 
@@ -397,6 +395,9 @@ header .max__gifo-container--maximized .max__img-overlay-container {
           flex-direction: column;
   max-width: 80vw;
   max-height: 50vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 header .max__gifo-container--maximized .max__img-overlay-container .max__img {
@@ -531,11 +532,26 @@ header .max__gifo-container--maximized .max__img-overlay-container .max__overlay
     font-size: 3.5rem;
     line-height: 5rem;
   }
-  header .max__gifo-container--maximized .max__next {
+  header .max__gifo-container--maximized .max__slide-btn {
     display: block;
-    width: 50px;
-    height: 50px;
-    background-color: aqua;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+  }
+  header .max__gifo-container--maximized .max__slide-btn.next {
+    background: url(../svg/Button-Slider-right.svg);
+    right: 20vw;
+  }
+  header .max__gifo-container--maximized .max__slide-btn.next:hover {
+    background: url(../svg/Button-Slider-right-hover.svg);
+  }
+  header .max__gifo-container--maximized .max__slide-btn.prev {
+    background: url(../svg/button-slider-left.svg);
+    left: 20vw;
+  }
+  header .max__gifo-container--maximized .max__slide-btn.prev:hover {
+    background: url(../svg/button-slider-left-hover.svg);
   }
 }
 /*# sourceMappingURL=header.css.map */
