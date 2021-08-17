@@ -19,7 +19,7 @@ main .results h2.results__title .favorites-icon {
   background-repeat: no-repeat;
 }
 
-main .results h2.results__title .mis-gifos-icon {
+main .results h2.results__title .user-gifos-icon {
   width: 2.8rem;
   height: 2.8rem;
   margin: 0 auto;
@@ -181,6 +181,32 @@ main .results .results__container .results__gifo-container .results__img-overlay
 main .results .results__container .results__gifo-container .results__img-overlay-container .results__overlay .results__gifo-text-container p.results__gifo-title {
   font-size: 1.6rem;
   font-weight: 700;
+}
+
+main .results .results__container .alert-container .alert-icon {
+  margin: 0 auto;
+  margin-top: 10rem;
+  width: 15rem;
+  height: 15rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+main .results .results__container .alert-container .alert-icon.favorites {
+  background-image: url(../svg/icon-fav-sin-contenido.svg);
+}
+
+main .results .results__container .alert-container .alert-icon.user-gifos {
+  background-image: url(../svg/icon-mis-gifos-sin-contenido.svg);
+}
+
+main .results .results__container .alert-container h3 {
+  margin: 2.5rem 2rem;
+  max-width: 50rem;
+  font-size: 2.3rem;
+  line-height: 3.3rem;
+  color: #50E3C2;
+  text-align: center;
 }
 
 main .results__gifo-button-viewMore {
