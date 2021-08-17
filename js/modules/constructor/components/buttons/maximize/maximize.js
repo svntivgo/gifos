@@ -5,7 +5,8 @@ export let maximize = (section, index, imgUrl, gifId, owner, title, id, arrayPus
         let maxContainer = document.getElementById('max__gifo-container')
         maxContainer.classList.toggle('max__gifo-container--maximized')
         maxContainer.innerHTML = (`
-        <div class="max__next" id="max__next"></div>
+        <div class="max__slide-btn next" id="max__next"></div>
+        <div class="max__slide-btn prev" id="max__prev"></div>
         <div class="max__close" id="max__close"></div>
         <div class="max__img-overlay-container">
             <img class="max__img" id="max__img" src="${imgUrl}" alt="">
