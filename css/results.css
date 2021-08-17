@@ -67,9 +67,9 @@ main .results .results__container .results__gifo-container .results__close {
 }
 
 main .results .results__container .results__gifo-container .results__img-overlay-container {
-  width: 40vw;
-  max-width: 20rem;
-  height: 40vw;
+  width: 15.6rem;
+  max-width: 26rem;
+  height: 12rem;
   max-height: 20rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -85,9 +85,9 @@ main .results .results__container .results__gifo-container .results__img-overlay
   display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 40vw;
-  max-width: 20rem;
-  height: 40vw;
+  width: 15.6rem;
+  max-width: 26rem;
+  height: 12rem;
   max-height: 20rem;
   background-color: rgba(87, 46, 229, 0.7);
   position: absolute;
@@ -203,5 +203,16 @@ main .results__gifo-button-viewMore {
   font-weight: bold;
   color: #572EE5;
   letter-spacing: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  main .results .results__container .results__gifo-container .results__img-overlay-container {
+    width: 26rem;
+    height: 20rem;
+  }
+  main .results .results__container .results__gifo-container .results__img-overlay-container .results__overlay {
+    width: 26rem;
+    height: 20rem;
+  }
 }
 /*# sourceMappingURL=results.css.map */

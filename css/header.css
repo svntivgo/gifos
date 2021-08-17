@@ -240,7 +240,7 @@ header .max__gifo-container .max__close {
 
 header .max__gifo-container .max__img-overlay-container {
   width: 80vw;
-  max-width: 20rem;
+  max-width: 26rem;
   height: 80vw;
   max-height: 20rem;
   display: -webkit-box;
@@ -258,7 +258,7 @@ header .max__gifo-container .max__img-overlay-container .max__overlay {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 80vw;
-  max-width: 20rem;
+  max-width: 26rem;
   height: 80vw;
   max-height: 20rem;
   background-color: rgba(87, 46, 229, 0.7);
