@@ -28,14 +28,14 @@ import { trendingTerms } from "./modules/trend-terms/trend-terms.js";
 
 import * as user from "./user.js"
 
-import { favs } from "./favorites.js";
+import { favs, gifsOnLocal } from "./favorites.js";
 
 window.onload = () => {
     let favorites = localStorage.getItem("favorites") ? JSON.parse(localStorage.getItem('favorites')) : favs
 
     let resultsGifs = []
     let trendingGifs = []
-    let testTrendingGifs = JSON.parse(localStorage.getItem('trending'))
+    let testTrendingGifs = localStorage.getItem('trending') ? JSON.parse(localStorage.getItem('trending')): gifsOnLocal
     let terms = {
         "data": [
             "relaxing",
