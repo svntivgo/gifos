@@ -1,0 +1,198 @@
+main .trending {
+  padding: 6rem 2rem;
+  background-color: #F3F5F8;
+  text-align: center;
+}
+
+main .trending h2.trending__title {
+  padding: 0 20vw;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+main .trending .trending__text {
+  padding: 0 20vw;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+}
+
+main .trending .trending__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5rem;
+  overflow-x: scroll;
+}
+
+main .trending .trending__container .trending__arrow {
+  display: none;
+  width: 4rem;
+  height: 4rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main .trending .trending__container .trending__arrow:hover {
+  cursor: pointer;
+  background-size: cover;
+}
+
+main .trending .trending__container .trending__arrow-left {
+  background-image: url(../svg/button-slider-left.svg);
+}
+
+main .trending .trending__container .trending__arrow-left:hover {
+  background-image: url(../svg/button-slider-left-hover.svg);
+}
+
+main .trending .trending__container .trending__arrow-right {
+  background-image: url(../svg/Button-Slider-right.svg);
+}
+
+main .trending .trending__container .trending__arrow-right:hover {
+  background-image: url(../svg/button-slider-right-hover.svg);
+}
+
+main .trending .trending__container .trending__gifo-container {
+  margin: 1rem;
+}
+
+main .trending .trending__container .trending__gifo-container .trending__close {
+  display: none;
+  width: 2rem;
+  height: 2rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 10vw;
+  margin-bottom: 3rem;
+  background-image: url("../svg/close.svg");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container {
+  width: 80vw;
+  max-width: 26rem;
+  height: 80vw;
+  max-height: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__img {
+  width: 100%;
+  height: 100%;
+}
+
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay {
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 80vw;
+  max-width: 26rem;
+  height: 80vw;
+  max-height: 20rem;
+  background-color: rgba(87, 46, 229, 0.7);
+  position: absolute;
+}
+
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-top: 1rem;
+  padding-right: 0.5rem;
+}
+
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button {
+  width: 3.2rem;
+  height: 3.2rem;
+  margin: 0 0.5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite {
+  background: url(../svg/icon-fav.svg);
+}
+
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite:hover {
+  background: url(../svg/icon-fav-hover.svg);
+}
+
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite:active {
+  max-width: 3.2rem;
+  max-height: 3.2rem;
+  background: url(../svg/icon-fav-active.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-favorite-saved {
+  max-width: 3.2rem;
+  max-height: 3.2rem;
+  background: url(../svg/icon-fav-active.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-download {
+  background: url(../svg/icon-download.svg);
+}
+
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-download:hover {
+  background: url(../svg/icon-download-hover.svg);
+}
+
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-maximize {
+  background: url(../svg/icon-max-normal.svg);
+}
+
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-buttons-container .trending__gifo-button-maximize:hover {
+  background: url(../svg/icon-max-hover.svg);
+}
+
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 2rem;
+  text-align: left;
+}
+
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-text-container p {
+  color: #fff;
+}
+
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-text-container p.trending__gifo-owner {
+  font-size: 1.5rem;
+}
+
+main .trending .trending__container .trending__gifo-container .trending__img-overlay-container .trending__overlay .trending__gifo-text-container p.trending__gifo-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+/*# sourceMappingURL=trending.css.map */
