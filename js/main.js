@@ -13,7 +13,8 @@ import {
 import {
     getSearchGiphyArray,
     getTrendingGiphyArray,
-    getGiphyAutocomplete
+    getGiphyAutocomplete,
+    getGiphyTrendingTerms
 } from "./modules/getters/getters.js";
 
 import {
@@ -24,75 +25,63 @@ import {
     Gifo
 } from "./modules/constructor/constructor.js";
 
-import { trendingTerms } from "./modules/trend-terms/trend-terms.js";
+import {
+    trendingTerms
+} from "./modules/trend-terms/trend-terms.js";
 
 import * as user from "./user.js"
 
-import { favs, gifsOnLocal } from "./favorites.js";
+import {
+    favs,
+    gifsOnLocal
+} from "./favorites.js";
 
 window.onload = () => {
-    let favorites = localStorage.getItem("favorites") ? JSON.parse(localStorage.getItem('favorites')) : favs
+    let favorites = localStorage.getItem("favorites") ? JSON.parse(localStorage.getItem('favorites')) : []
 
     let resultsGifs = []
     let trendingGifs = []
-    let testTrendingGifs = localStorage.getItem('trending') ? JSON.parse(localStorage.getItem('trending')): gifsOnLocal
-    let terms = {
-        "data": [
-            "relaxing",
-            "thinking",
-            "begin",
-            "divine",
-            "funny dog",
-            "frozen elsa",
-            "face palm",
-            "champagne",
-            "sad face",
-            "comedy",
-            "super saiyan 3",
-            "beer",
-            "cant read",
-            "airplane",
-            "sharon stone",
-            "chile",
-            "Hotdog",
-            "dog",
-            "flirting",
-            "hugging"
-        ],
-        "meta": {
-            "status": 200,
-            "msg": "OK",
-            "response_id": "1aea4e97aedf84e64c1a4df0f3ec1f245d2dd0ed"
-        }
-    }
+    let testTrendingGifs = localStorage.getItem('trending') ? JSON.parse(localStorage.getItem('trending')) : gifsOnLocal
+
 
     theme()
     menu()
     button()
-    searchBar(getSearchGiphyArray, getGiphyAutocomplete, 0, Gifo)
-    trendingTerms(terms)
+    searchBar(getSearchGiphyArray, getGiphyAutocomplete, 0, Gifo, resultsGifs, favorites)
+
 
     user.saved('favorites', 'Favoritos', 'favorites')
     user.created([], 'Mis GIFOS', 'user-gifos')
-    // user.saved('user-gifos', 'Mis gifos', 'mis-gifos')
 
 
     /**
-     * Draws gifs on trending section
-     * @param {string} giphyTrendingPath is the url to the API
-     * @param {string} apiKey is the key access to the API
+     * API for trending terms on search
      */
-    // getTrendingGiphyArray(3).then(
-    //     (response) => {
+    getGiphyTrendingTerms().then(
+        (response) => {
 
-    //         let trendingArray = response.data
-    //         console.log(trendingArray);
-    //         testgifs('trending', trendingGifs, trendingArray)
+        let container = document.getElementById('results__tags')
+        let terms = response.data
+        container.innerText = (`${terms[0]}, ${terms[1]}, ${terms[2]}, ${terms[3]}, ${terms[4]}`);
 
-    //     }
-    // )
+        }
+    )
 
-    function testgifs(section, arrayPush, array, favo) {
+
+    /**
+     * API for treding content
+     * @param {number} 6 the number of objects on response
+     */
+    getTrendingGiphyArray(0).then(
+        (response) => {
+
+            let trendingArray = response.data
+            arrayToGif('trending', trendingGifs, trendingArray, favorites)
+
+        }
+    )
+
+    function arrayToGif(section, arrayPush, array, favo) {
 
         let id = document.getElementById(`${section}__container`).childElementCount
 
@@ -100,19 +89,19 @@ window.onload = () => {
             arrayPush.push(array[i])
             let trendings = new Gifo(i, `${section}`, id, arrayPush)
             trendings.gifoBuilder(favo)
-            id ++
+            id++
         }
     }
 
-function vermas() {
-    let boton = document.getElementById("results__title")
-    boton.addEventListener('click', () => {
-        console.log("object");
-        testgifs('results', resultsGifs)
-    })
-}
-vermas()
+    // function vermas() {
+    //     let boton = document.getElementById("results__title")
+    //     boton.addEventListener('click', () => {
+    //         console.log("object");
+    //         testgifs('results', resultsGifs)
+    //     })
+    // }
+    // vermas()
 
-    testgifs('results', trendingGifs, testTrendingGifs, favorites)
-    testgifs('trending', trendingGifs, testTrendingGifs, favorites)
+    // testgifs('results', trendingGifs, testTrendingGifs, favorites)
+    // testgifs('trending', trendingGifs, testTrendingGifs, favorites)
 }
