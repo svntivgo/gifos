@@ -57,15 +57,15 @@ window.onload = () => {
     /**
      * API for trending terms on search
      */
-    // getGiphyTrendingTerms().then(
-    //     (response) => {
+    getGiphyTrendingTerms().then(
+        (response) => {
 
-    //     let container = document.getElementById('results__tags')
-    //     let terms = response.data
-    //     container.innerText = (`${terms[0]}, ${terms[1]}, ${terms[2]}, ${terms[3]}, ${terms[4]}`);
+        let container = document.getElementById('results__tags')
+        let terms = response.data
+        container.innerText = (`${terms[0]}, ${terms[1]}, ${terms[2]}, ${terms[3]}, ${terms[4]}`);
 
-    //     }
-    // )
+        }
+    )
 
 
     /**
