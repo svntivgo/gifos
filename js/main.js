@@ -47,7 +47,7 @@ window.onload = () => {
     theme()
     menu()
     button()
-    searchBar(getSearchGiphyArray, getGiphyAutocomplete, 0, Gifo, resultsGifs, favorites)
+    searchBar(getSearchGiphyArray, getGiphyAutocomplete, 6, Gifo, resultsGifs, favorites)
 
 
     user.saved('favorites', 'Favoritos', 'favorites')
@@ -72,7 +72,7 @@ window.onload = () => {
      * API for treding content
      * @param {number} 6 the number of objects on response
      */
-    getTrendingGiphyArray(0).then(
+    getTrendingGiphyArray(6).then(
         (response) => {
 
             let trendingArray = response.data
