@@ -1,4 +1,5 @@
 export let click = (searchIcon, getterSearch, inputBox, limit, cleaner, constructor, autocompleteBox, resultsSection, arrayPush, favorites) => {
+    let theme = localStorage.getItem('theme')
     searchIcon.addEventListener('click', () => {
         getterSearch(inputBox.value, limit).then(
             (response) => {
