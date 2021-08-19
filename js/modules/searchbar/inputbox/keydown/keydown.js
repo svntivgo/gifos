@@ -8,7 +8,7 @@ export let keydown = (inputBox, getterSearch, getterAutocomplete, limit, cleaner
                     let gifsArray = response.data
                     cleaner(autocompleteBox, inputBox, searchIcon, resultsSection)
                     let id = document.getElementById(`results__container`).childElementCount
-                    console.log(gifsArray);
+
                     for (let i = 0; i < gifsArray.length; i++) {
                         arrayPush.push(gifsArray[i])
                         let trendings = new constructor(i, `results`, id, arrayPush)
