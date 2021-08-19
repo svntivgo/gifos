@@ -1,9 +1,8 @@
-export let autocompleteConstructor = (autocompleteBox) => {
+export let autocompleteConstructor = (autocompleteBox, autocompleteArray) => {
     autocompleteBox.innerHTML = ""
     for (let i = 0; i < 4; i++) {
         autocompleteBox.style.display = "block"
-        // let tag = response[i].name
-        let tag = "gatos"
+        let tag = autocompleteArray[i].name
         let tagBox
         tagBox = document.createElement('div')
         tagBox.className = "search__tag-container"

@@ -42,8 +42,8 @@ export let maximize = (section, index, imgUrl, gifId, owner, title, id, arrayPus
         })
 
         document.getElementById(`max__gifo-button-favorite`).addEventListener('click', () => {
-            // favorites.push(arrayPush[id])
-            // localStorage.setItem('favorites', JSON.stringify(favorites))
+            favorites.push(arrayPush[id])
+            localStorage.setItem('favorites', JSON.stringify(favorites))
         })
         document.getElementById(`max__gifo-button-download`).addEventListener('click', () => {
             window.open(`https://i.giphy.com/media/${arrayPush[id].id}/source.gif`, "_blank");
