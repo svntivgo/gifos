@@ -3,7 +3,6 @@ export let maximize = (section, index, imgUrl, gifId, owner, title, id, arrayPus
     let overlay = document.getElementsByClassName(`${section}__overlay`)
     let favorite = favorites.find((fav) => fav.id === arrayPush[id].id)
     img[id].addEventListener('click', () => {
-        console.log("hizo click");
         let maxContainer = document.getElementById('max__gifo-container')
         maxContainer.classList.toggle('max__gifo-container--maximized')
         maxContainer.innerHTML = (`
