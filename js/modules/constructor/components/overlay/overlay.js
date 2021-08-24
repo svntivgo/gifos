@@ -4,8 +4,11 @@ export let overlay = (section, id) => {
 
 
     gifoContainer.lastChild.addEventListener("mouseenter", (event) => {
-        overlay.style.display = "flex"
-        event.stopPropagation
+        if (window.width >= 1024) {
+            console.log("es mayor o giual");
+            overlay.style.display = "flex"
+            event.stopPropagation
+        }
     })
     gifoContainer.lastChild.addEventListener("mouseleave", (event) => {
         overlay.style.display = "none"
