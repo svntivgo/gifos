@@ -36,6 +36,8 @@ import {
     gifsOnLocal
 } from "./favorites.js";
 
+import { gifoCreator } from "./modules/gifo-creator/gifo-creator.js";
+
 window.onload = () => {
     let favorites = localStorage.getItem("favorites") ? JSON.parse(localStorage.getItem('favorites')) : []
 
@@ -48,6 +50,7 @@ window.onload = () => {
     menu()
     button()
     searchBar(getSearchGiphyArray, getGiphyAutocomplete, 6, Gifo, resultsGifs, favorites)
+    gifoCreator()
 
 
     user.saved('favorites', 'Favoritos', 'favorites')
@@ -72,14 +75,14 @@ window.onload = () => {
      * API for treding content
      * @param {number} 6 the number of objects on response
      */
-    getTrendingGiphyArray(3).then(
-        (response) => {
+    // getTrendingGiphyArray(3).then(
+    //     (response) => {
 
-            let trendingArray = response.data
-            arrayToGif('trending', trendingGifs, trendingArray, favorites)
+    //         let trendingArray = response.data
+    //         arrayToGif('trending', trendingGifs, trendingArray, favorites)
 
-        }
-    )
+    //     }
+    // )
 
     function arrayToGif(section, arrayPush, array, favo) {
 
