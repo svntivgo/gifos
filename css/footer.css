@@ -81,4 +81,28 @@
 .footer .copyrights--dark {
   color: #fff;
 }
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 5rem 15rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer .social {
+    width: auto;
+    margin-bottom: unset;
+  }
+  .footer .social .social__text {
+    width: auto;
+    margin-bottom: unset;
+  }
+  .footer .copyrights {
+    width: auto;
+    margin-top: unset;
+  }
+}
 /*# sourceMappingURL=footer.css.map */

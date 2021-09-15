@@ -4,6 +4,7 @@ export function gifoCreator() {
         document.getElementById('search'),
         document.getElementById('results__title'),
         document.getElementById('results__tags'),
+        document.getElementById('results__container'),
         document.getElementById('trending')
     ]
 
